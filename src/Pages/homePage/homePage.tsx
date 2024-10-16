@@ -1,19 +1,21 @@
-import {Header} from '../../Components/Header'
-import {Footer} from '../../Components/Footer'
-import {HomeTitle} from '../../Components/HomeTitle'
-import {SearchBar} from '../../Components/SearchBar';
-import {BodyTitele} from '../../Components/BodyTitele';
-import {SpecialGallery} from '../../Components/SpecialGallery';
+import {Header} from '../../Components/header'
+import {Footer} from '../../Components/footer'
+import {HomeTitle} from '../../Components/homeTitle'
+import {SearchBar} from '../../Components/searchBar';
+import {BodyTitele} from '../../Components/bodyTitele';
+import {SpecialGallery} from '../../Components/specialGallery';
+import {BodyTiteleOther} from '../../Components/bodyTiteleOther';
 
 export function HomePage() {
     return (
         <div className="wrapper">
   <div className='content'>
   <Header/>
-  {/* <HomeTitle/> */}
+  <HomeTitle/>  
   <SearchBar/>
   <BodyTitele/>
   <SpecialGallery/>
+  <BodyTiteleOther/>
   <Footer/>
  </div>
  </div>

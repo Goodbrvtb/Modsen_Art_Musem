@@ -1,5 +1,5 @@
 
-import {Footer} from '../../Components/Footer'
+import {Footer} from '../../Components/footer'
 export function FavouritesPage() {
     return (
        
