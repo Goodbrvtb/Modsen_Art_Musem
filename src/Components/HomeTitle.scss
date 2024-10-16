@@ -1,0 +1,25 @@
+ .home-title{
+    font-family:'Lexend Deca';
+    margin: 120px;
+    font-size: 67px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 700;
+    line-height:80px
+
+}
+.home-title p {
+    color: rgba(57, 57, 57, 1);
+    margin: 0;
+}
+.home-title p span{
+    color: rgba(241, 121, 0, 1);
+
+}
+@font-face {
+    font-family: 'Lexend Deca';  
+    src: url("../styles/LexendDecaRegular.woff") format("woff");
+    font-style: normal; 
+    font-weight: normal;
+     }
