@@ -1,7 +1,7 @@
 import React from 'react';
-import './BodyTiteleOther.scss'; 
+import './style.scss'; 
 
-export const BodyTiteleOther: React.FC = () => {
+export const BodyTitleOther: React.FC = () => {
   return (
     <div className="body-title-other">
      <p>

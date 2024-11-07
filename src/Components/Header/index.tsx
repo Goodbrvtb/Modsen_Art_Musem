@@ -1,12 +1,12 @@
-import React from 'react';
-import './Header.scss'; 
-import  logo from "../assets/logos/museum-logo.svg"
-import  bookmark from "../assets/logos/bookmark.svg"
+import {FC} from 'react';
+import './style.scss'; 
+import  logo from "../../assets/logos/museum-logo.svg"
+import  bookmark from "../../assets/logos/bookmark.svg"
 import { NavLink } from "react-router-dom";
 
 
 
-export const Header: React.FC = () => {
+export const Header: FC = () => {
   return (
     <header className="header">
       <div className="top-bar">

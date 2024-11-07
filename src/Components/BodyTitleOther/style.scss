@@ -1,8 +1,6 @@
 .body-title-other{
-    position: absolute;
-    top: 1310px;
-    font-family:'Lexend Deca';
-    margin: 120px;
+    font-family:'LexendDeca';
+    margin: 150px 0 40px 0;
     font-size: 64px;
     text-align: center;
     font-weight: 700;
@@ -22,9 +20,3 @@
     line-height: 20px;
    
 }
-@font-face {
-    font-family: 'Lexend Deca';  
-    src: url("../styles/LexendDecaRegular.woff") format("woff");
-    font-style: normal; 
-    font-weight: normal;
-     }

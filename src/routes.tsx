@@ -1,4 +1,4 @@
-import { FavouritesPage } from "./Pages/favorites/favorites"
+import { FavoritesPage } from "./Pages/favorites/favorites"
 import { HomePage } from "./Pages/homePage/homePage"
 
 
@@ -9,6 +9,6 @@ export const routes = [
     },
     {
       path: "/fav",
-      element: FavouritesPage,
+      element:FavoritesPage,
     }
   ];

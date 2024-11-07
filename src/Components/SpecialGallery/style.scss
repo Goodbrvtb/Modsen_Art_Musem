@@ -1,0 +1,17 @@
+ .special-gallery{
+    display: flex;
+    width: 1280px;
+    height: 514px;
+    flex-direction: row;
+    justify-content: space-between;
+
+ }
+  .special-gallery-card{
+    display: flex;
+    width: 387px;
+    height: 514px;
+    border: 1px solid;
+   //  color: rgba(240, 241, 241, 1)
+   color: rgb(8, 8, 8)
+
+ }

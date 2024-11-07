@@ -1,7 +1,7 @@
 import React from 'react';
-import './Footer.scss'; 
-import  LogoFt from "../assets/logos/museum-logo 2.svg"
-import  LogoMod from "../assets/logos/logo modsen-02 2.svg"
+import './style.scss'; 
+import  LogoFt from "../../assets/logos/museum-logo 2.svg"
+import  LogoMod from "../../assets/logos/logo modsen-02 2.svg"
 
 export const Footer: React.FC = () => {
   return (

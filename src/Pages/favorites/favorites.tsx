@@ -1,6 +1,6 @@
 
-import {Footer} from '../../Components/footer'
-export function FavouritesPage() {
+import {Footer} from '../../Components/Footer/index'
+export function FavoritesPage() {
     return (
        
         <div className="wrapper">

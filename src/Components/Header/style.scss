@@ -6,8 +6,6 @@ margin: 0;
 display: flex;
 justify-content: center;
 align-items: center;
-left: 0;
-bottom: 0;
 background:linear-gradient(
   90deg,
   rgba(52, 51, 51, 1) 17%,
@@ -22,14 +20,14 @@ align-items: center;
 justify-content: space-between;
 flex-direction: row;
 width: 100%;
-width: 1280px;
+max-width: 1280px;
 height: 63px;
 }
 
 .logo{
   display: flex;
   height: 63px;
-  width: 206px;
+  width:  206px;
   align-items: center;
   justify-content: space-between;
 }
@@ -46,7 +44,7 @@ height: 63px;
   align-items: center;
 }
 .favorites{
-  font-family:'Inter-Regular';
+  font-family:'InterRegular';
   color: rgba(255, 255, 255, 1);
   font-size: 18px;
   font-weight: 400;
@@ -60,9 +58,3 @@ height: 63px;
 }
 
 
-@font-face {
-  font-family: 'Inter-Regular';  
-  src: url("../styles/Inter-Regular.woff") format("woff");
-  font-style: normal; 
-  font-weight: normal;
-   }
