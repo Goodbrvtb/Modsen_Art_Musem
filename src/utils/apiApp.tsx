@@ -1,18 +1,8 @@
 import axios from "axios";
 import { ARTWORKS_BY_ID_ENDPOINT, ARTWORKS_ENDPOINT, SEARCH_ENDPOINT } from "../constants/api";
+import { ArtWorkType, SearchArtWorkType } from "../utils/types"
 
-interface SearchArtWorkType {
-  data: { id: number }[]
 
-}
-
-interface ArtWorkType {
-  data: {
-    image_id: string,
-    id: number
-  }
-
-}
 
 // Описать тип возвращаемого значения 
 // Возвращать data.data чтобы не делать это выше!
@@ -51,7 +41,7 @@ export const getArtWorksByIdApiAxios = async (artWorkId: number): Promise<ArtWor
   // Делаем запрос пользователя с данным ID
   const resultAxios = await axios.get(ARTWORKS_BY_ID_ENDPOINT(artWorkId), {
     params: {
-      fields: "image_id,id",
+      fields: "image_id,id,title,artist_display",
       limit: 3
     }
 

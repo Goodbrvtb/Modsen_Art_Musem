@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react"
 import { IMAGE_ENDPOINT } from "../../constants/api"
-import { fetchArtWorkByIdApi, getArtWorksByIdApiAxios, searchArtWorksApiAxios } from "../apiApp"
+import { getArtWorksByIdApiAxios, searchArtWorksApiAxios } from "../apiApp"
+import { useArtWorksApiAxiosProps } from "../types"
 
-interface useArtWorksApiAxiosProps {
-    searchValue: string
-}
 
 
 export const useArtWorksApiAxios = ({ searchValue }: useArtWorksApiAxiosProps) => {
@@ -19,7 +17,10 @@ export const useArtWorksApiAxios = ({ searchValue }: useArtWorksApiAxiosProps) =
 
                 return {
                     ...data,
-                    imageUrl:IMAGE_ENDPOINT(data.image_id)
+                    imageUrl:IMAGE_ENDPOINT(data.image_id),
+                    title:data.title,
+                    artist_display:data.artist_display,
+
                 }
             }))
             setData(artWorkFullInfo)

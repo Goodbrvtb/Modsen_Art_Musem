@@ -1,8 +1,9 @@
 import { FC } from 'react';
 import './style.scss';
+import { OtherGalleryProps } from '../../utils/types';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-interface OtherGalleryProps { otherArtWorks: any[] }
+
+
 
 
 export const OtherGallery: FC<OtherGalleryProps> = ({ otherArtWorks }) => {
