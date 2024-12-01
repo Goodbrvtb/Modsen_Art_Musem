@@ -4,6 +4,7 @@ export interface ArtWorkType {
         id: number,
         title: string,
         artist_display: string,
+        is_public_domain: boolean,
 
     }
 
@@ -14,10 +15,14 @@ export interface SearchArtWorkType {
 
 }
 
-export interface useArtWorksApiAxiosProps {
+export interface UseArtWorksApiAxiosProps {
     searchValue: string
 }
 
 export interface OtherGalleryProps { otherArtWorks: any[] }
 
 export interface SpecialGalleryProps { artWorks: any[] }
+
+export interface UseArtWorkApiAxiosProps {
+    id: number
+}

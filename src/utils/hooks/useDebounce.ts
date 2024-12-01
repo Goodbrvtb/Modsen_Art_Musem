@@ -13,6 +13,7 @@ export function useDebounce(func: SomeFunction, delay: number) {
             }
         }
     }, [])
+
     const debounceFunction = (...args: any[]) => {
         const timeoutNewId = setTimeout(() => { func(...args) }, delay)
         clearTimeout(timeoutCurrent.current)

@@ -8,30 +8,3 @@
 
 
  }
-
- .special-gallery-card {
-   width: 387px;
-   height: 444px;
-   border: 1px solid;
-   color: rgb(8, 8, 8);
-   background-position: center center;
-   background-size: cover;
- }
-
- .info {
-   position: absolute;
-   z-index: 5;
-   width: 334px;
-   height: 132px;
-   background-color: rgba(255, 255, 255, 1);
-   border: 1px solid;
-   color: rgb(8, 8, 8);
-   margin-left: 26px;
-   bottom: 0px;
-   display: flex;
-   align-items: center;
-   flex-direction: column;
-   flex-wrap: nowrap;
-   align-content: flex-end;
-   justify-content: center;
- }

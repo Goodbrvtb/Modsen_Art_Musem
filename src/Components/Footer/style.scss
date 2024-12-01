@@ -1,34 +1,34 @@
-.footer  {
-    margin: 120px;
+.footer {
+    // margin: 120px;
     width: 100%;
     height: 127px;
     display: flex;
     justify-content: center;
     align-items: center;
 
-background: rgba(255, 255, 255, 1);
+    background: rgba(255, 255, 255, 1);
 
 
-.footer-Bar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1280px;
-    width: 100%;
-    height: 63px;
+    .footer-Bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1280px;
+        width: 100%;
+        height: 63px;
     }
 
-.logo-Footer{
-    height: 63px;
-    width: 206px;
-    top: 32px;
-    left: 320px;
-}
+    .logo-Footer {
+        height: 63px;
+        width: 206px;
+        top: 32px;
+        left: 320px;
+    }
 
-.logo-Moodsen{
-    height: 59px;
-    width: 164px;
-    right:0px;
-    vertical-align: middle; 
-}
+    .logo-Moodsen {
+        height: 59px;
+        width: 164px;
+        right: 0px;
+        vertical-align: middle;
+    }
 }

@@ -18,7 +18,11 @@ import { ArtWorkType, SearchArtWorkType } from "../utils/types"
 
 export const searchArtWorksApiAxios = async (inputData: string): Promise<SearchArtWorkType> => {
   // Делаем запрос пользователя с данным ID
-  const resultAxios = await axios.get(SEARCH_ENDPOINT(inputData))
+  const resultAxios = await axios.get(SEARCH_ENDPOINT(inputData), {
+    params: {
+      limit: 3
+    }
+  })
     .then(function (data) {
       // обработка успешного запроса
       console.log(data, 'axios');
@@ -28,21 +32,11 @@ export const searchArtWorksApiAxios = async (inputData: string): Promise<SearchA
 }
 
 
-// Описать тип возвращаемого значения 
-// export const fetchArtWorkByIdApi = (artWorkId: number) => {
-//   return fetch(ARTWORKS_BY_ID_ENDPOINT(artWorkId))
-//     .then((res) => res.json())
-//     .then((data) => {
-//       console.log(data)
-//       return data
-//     })
-// }
 export const getArtWorksByIdApiAxios = async (artWorkId: number): Promise<ArtWorkType> => {
   // Делаем запрос пользователя с данным ID
   const resultAxios = await axios.get(ARTWORKS_BY_ID_ENDPOINT(artWorkId), {
     params: {
-      fields: "image_id,id,title,artist_display",
-      limit: 3
+      fields: "image_id,id,title,artist_display,is_public_domain,place_of_origin,dimensions,credit_line,is_on_view,gallery_title,date_start,date_end",
     }
 
   })

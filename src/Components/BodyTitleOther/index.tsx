@@ -1,12 +1,16 @@
 import React from 'react';
-import './style.scss'; 
+import './style.scss';
+
+
+
+
 
 export const BodyTitleOther: React.FC = () => {
   return (
     <div className="body-title-other">
-     <p>
+      <p>
         <span>Here some more</span> <br />Other works for you
       </p>
-</div>
+    </div>
   );
 };
