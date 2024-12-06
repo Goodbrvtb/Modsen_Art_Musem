@@ -1,0 +1,121 @@
+.other-gallery-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 416px;
+    height: 130px;
+    background-color: white;
+    //  color: rgba(240, 241, 241, 1)
+
+}
+
+.other-image {
+    display: flex;
+    width: 80px;
+    height: 80px;
+}
+
+
+.info-other-text-other {
+    display: grid;
+    width: 219px;
+    height: 98px;
+    font-family: 'InterRegular';
+    flex-direction: column;
+
+}
+
+
+
+.info-fav-button-other {
+    display: flex;
+    width: 59px;
+    height: 59px;
+    border-radius: 50%;
+    background: rgba(251, 215, 178, 0.3);
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    .img {
+        display: grid;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+
+.title-other {
+    font-size: 17.54px;
+    font-weight: 500;
+    line-height: 26.32px;
+    letter-spacing: -0.03em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 10px;
+}
+
+.author-other {
+    font-family: 'InterRegular';
+    font-size: 15.35px;
+    font-weight: 400;
+    line-height: 26.32px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    text-decoration-skip-ink: none;
+    color: rgba(241, 121, 0, 1);
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+.public-domain-other {
+    margin-top: 17px;
+    font-family: 'InterRegular';
+    font-size: 15.35px;
+    font-weight: 700;
+    line-height: 26.32px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+
+}
+
+.info-other {
+    width: 219px;
+    height: 98px;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-end;
+    justify-content: center;
+}
+
+.info-text-other {
+    display: grid;
+    width: 219px;
+    height: 98px;
+    font-family: 'InterRegular';
+    flex-direction: column;
+
+}
+
+@font-face {
+    font-family: 'InterRegular';
+    src: url("../styles/") format("woff");
+    font-style: normal;
+    font-weight: normal;
+}

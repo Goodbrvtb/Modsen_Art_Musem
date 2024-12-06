@@ -11,12 +11,17 @@ export interface ArtWorkType {
 }
 
 export interface SearchArtWorkType {
-    data: { id: number }[]
+    data: { id: number }[],
+    pagination: {
+        current_page: number,
+        total_pages: number,
+    }
 
 }
 
 export interface UseArtWorksApiAxiosProps {
-    searchValue: string
+    searchValue: string,
+    selectedPage: number,
 }
 
 export interface OtherGalleryProps { otherArtWorks: any[] }

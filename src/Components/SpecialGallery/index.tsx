@@ -6,10 +6,6 @@ import { ArtWorkInfoCard } from '../ArtWorkInfoCard';
 
 
 export const SpecialGallery: FC<SpecialGalleryProps> = ({ artWorks }) => {
-
-  // const limitArtWorks = artWorks.slice(0, 3)
-
-
   return (
     <>
       <SectionTitle title={<><span>Topics for you</span> <br />Our special gallery!</>} />

@@ -4,23 +4,14 @@ import { ArtWorkType, SearchArtWorkType } from "../utils/types"
 
 
 
-// Описать тип возвращаемого значения 
-// Возвращать data.data чтобы не делать это выше!
-// export const searchArtWorksApi = (inputData: string):SearchArtWorkType => {
-//   return fetch(SEARCH_ENDPOINT(inputData))
-//     .then((res) => res.json())
-//     .then((data) => {
-//       console.log(data)
-//       return data
-//     })
-// }
 
 
-export const searchArtWorksApiAxios = async (inputData: string): Promise<SearchArtWorkType> => {
+export const searchArtWorksApiAxios = async (inputData: string, currentPage: number): Promise<SearchArtWorkType> => {
   // Делаем запрос пользователя с данным ID
   const resultAxios = await axios.get(SEARCH_ENDPOINT(inputData), {
     params: {
-      limit: 3
+      limit: 3,
+      page: currentPage
     }
   })
     .then(function (data) {
@@ -52,7 +43,7 @@ export const getOtherArtWorksApiAxios = async (): Promise<SearchArtWorkType> => 
   // Делаем запрос пользователя с данным ID
   const resultAxios = await axios.get(ARTWORKS_ENDPOINT, {
     params: {
-      limit: 9
+      limit: 9,
     }
   })
     .then(function (data) {

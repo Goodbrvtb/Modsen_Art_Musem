@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { getArtWorksByIdApiAxios } from "../apiApp"
-import { ArtWorkType, UseArtWorkApiAxiosProps } from "../types"
+import { UseArtWorkApiAxiosProps } from "../types"
 import { IMAGE_ENDPOINT } from "../../constants/api"
 
 

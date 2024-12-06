@@ -8,12 +8,19 @@ import { Title } from '../../Components/Title/index';
 import { useArtWorksApiAxios } from '../../utils/hooks/useAxiosArtWorks';
 import { SpecialGallery } from '../../Components/SpecialGallery';
 import { useGetOtherArtWorks } from '../../utils/hooks/useGetOtherArtWorks';
+import './style.scss';
+import { Pagination } from '../../Components/Pagination';
+import { useHandlePagination } from '../../utils/hooks/useHandlePagination';
 
 export function HomePage() {
 
     const [searchValue, setSearchValue] = useState('')
-    const { artWorksList } = useArtWorksApiAxios({ searchValue })
+    const { currentPage, handleCurrentPageChange } = useHandlePagination()
+    console.log(currentPage, 'currentPage')
+    const { artWorksList, totalPages } = useArtWorksApiAxios({ searchValue, selectedPage: currentPage })
     const { otherArtWorks } = useGetOtherArtWorks()
+
+
 
     return (
         <div className="wrapper">
@@ -22,6 +29,7 @@ export function HomePage() {
                 <Title title={<>Let's Find Some <span>Art</span> <br />Here!</>} />
                 <SearchBar setSearchValue={setSearchValue} />
                 <SpecialGallery artWorks={artWorksList} />
+                <Pagination currentPage={currentPage} lastPage={totalPages} setCurrentPage={handleCurrentPageChange} />
                 <BodyTitleOther />
                 <OtherGallery otherArtWorks={otherArtWorks} />
                 <Footer />

@@ -15,5 +15,90 @@
 .fav-cart {
     display: flex;
     padding: 120px;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.title-detailInfo {
+    width: 640px;
+    height: 80px;
+    font-family: 'LexendDeca';
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+
+}
+
+.author-detailInfo {
+    font-family: 'LexendDeca';
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(224, 164, 73, 1);
+
+
+}
+
+.years-detailInfo {
+    width: 140px;
+    height: 19px;
+    padding: 10px;
+    font-family: 'LexendDeca';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+
+
+
+.overview-div {
+    margin-top: 172px;
+    width: 480px;
+    height: 231px;
+
+
+}
+
+.overview {
+    width: 401px;
+    height: 40px;
+    font-family: 'LexendDeca';
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(57, 57, 57, 1);
+
+
+
+}
+
+.text-info {
+    font-family: 'LexendDeca';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+
+.text-info span {
+    color: rgba(224, 164, 73, 1);
 
 }
