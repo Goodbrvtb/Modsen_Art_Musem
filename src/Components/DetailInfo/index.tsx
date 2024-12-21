@@ -27,7 +27,7 @@ export const DetailCart: FC = () => {
             <div className="info-cart">
                 <div className='info-title'>
                     <div className="title-detailInfo">{info.data.title}</div>
-                    <div className="author-detailInfo">{info.data.artist_display}</div>
+                    <div className="author-detailInfo">{info.data.artist_title}</div>
                     <div className="years-detailInfo">{info.data.date_start}-{info.data.date_end}</div>
 
                     <div className='overview-div'>

@@ -1,14 +1,14 @@
-import {FC, ReactNode} from 'react';
-import './style.scss'; 
+import { FC, ReactNode } from 'react';
+import './style.scss';
 
-interface SectionTitleProps {title:string| ReactNode}
+interface SectionTitleProps { title: string | ReactNode, className?: string }
 
-export const SectionTitle: FC<SectionTitleProps> = ({title}) => {
+export const SectionTitle: FC<SectionTitleProps> = ({ title, className }) => {
   return (
-    <div className="body-title">
-     <p>
+    <div className={className ? className : "body-title"}>
+      <p>
         {title}
       </p>
-</div>
+    </div>
   );
 };

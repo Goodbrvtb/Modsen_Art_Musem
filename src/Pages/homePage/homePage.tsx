@@ -29,7 +29,7 @@ export function HomePage() {
                 <Title title={<>Let's Find Some <span>Art</span> <br />Here!</>} />
                 <SearchBar setSearchValue={setSearchValue} />
                 <SpecialGallery artWorks={artWorksList} />
-                <Pagination currentPage={currentPage} lastPage={totalPages} setCurrentPage={handleCurrentPageChange} />
+                <Pagination currentPage={currentPage} lastPage={totalPages} totalPages={totalPages} setCurrentPage={handleCurrentPageChange} />
                 <BodyTitleOther />
                 <OtherGallery otherArtWorks={otherArtWorks} />
                 <Footer />

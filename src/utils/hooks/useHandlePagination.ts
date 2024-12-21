@@ -4,8 +4,10 @@ import { useCallback, useState } from "react"
 interface UseHandlePaginationCurrentPage {
     currentPage: number,
     handleCurrentPageChange: (pageNumber: number) => void,
+    totalPages: number,
 
 }
+
 
 export const useHandlePagination = (): UseHandlePaginationCurrentPage => {
     const [currentPage, setCurrentPage] = useState(1)

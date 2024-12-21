@@ -1,0 +1,47 @@
+.pagination-div {
+    padding: 24px 0 0 0;
+    display: flex;
+    width: 1280px;
+    justify-content: flex-end;
+
+}
+
+.pagination {
+    width: 182px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.button-click-next {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    column-gap: 20px
+}
+
+.button-click-prev {
+    display: flex;
+    width: 30px;
+    height: 30px;
+}
+
+.img-click-prev {
+    transform: rotate(180deg);
+}
+
+.pagination-1,
+.pagination-2,
+.pagination-3,
+.pagination-4 {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+}
+
+.button {
+    margin: 0;
+}

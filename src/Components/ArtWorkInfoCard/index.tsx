@@ -12,6 +12,7 @@ interface ArtWorkInfoCardProps {
         imageUrl: string;
         artist_display: string;
         is_public_domain: boolean;
+        artist_title: string;
 
     }
 }
@@ -33,7 +34,7 @@ export const ArtWorkInfoCard: FC<ArtWorkInfoCardProps> = ({ artWork }) => {
             <div className="info">
                 <div className="info-text">
                     <div className="title">{artWork.title}</div>
-                    <div className="author">{artWork.artist_display}</div>
+                    <div className="author">{artWork.artist_title}</div>
                     <div className="public-domain">{artWork.is_public_domain ? 'Public' : 'Unpublish'}</div>
                 </div>
                 <div className="info-fav-button">

@@ -27,7 +27,7 @@ export const getArtWorksByIdApiAxios = async (artWorkId: number): Promise<ArtWor
   // Делаем запрос пользователя с данным ID
   const resultAxios = await axios.get(ARTWORKS_BY_ID_ENDPOINT(artWorkId), {
     params: {
-      fields: "image_id,id,title,artist_display,is_public_domain,place_of_origin,dimensions,credit_line,is_on_view,gallery_title,date_start,date_end",
+      fields: "image_id,id,title,artist_display,artist_title,is_public_domain,place_of_origin,dimensions,credit_line,is_on_view,gallery_title,date_start,date_end",
     }
 
   })
