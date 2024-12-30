@@ -35,8 +35,8 @@ export const ArtWorkInfoCardOther: FC<ArtWorkInfoCardProps> = ({ artWork }) => {
             </div>
 
         </div>
-        <div className="info-fav-button-other">
+        <button className="info-fav-button-other">
             <img src={info_fav_icon} alt=""></img>
-        </div>
+        </button>
     </div>)
 }

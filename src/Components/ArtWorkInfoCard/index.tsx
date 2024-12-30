@@ -37,9 +37,9 @@ export const ArtWorkInfoCard: FC<ArtWorkInfoCardProps> = ({ artWork }) => {
                     <div className="author">{artWork.artist_title}</div>
                     <div className="public-domain">{artWork.is_public_domain ? 'Public' : 'Unpublish'}</div>
                 </div>
-                <div className="info-fav-button">
+                <button className="info-fav-button">
                     <img src={info_fav_icon} alt=""></img>
-                </div>
+                </button>
             </div>
         </div>
         // </button>

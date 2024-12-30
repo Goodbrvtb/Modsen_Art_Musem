@@ -1,6 +1,7 @@
 import { FC } from "react";
 import './style.scss';
 import shapeNext from "../../assets/logos/shapeNext.svg";
+
 interface PaginationProps {
     currentPage: number,
     lastPage: number,
@@ -45,8 +46,8 @@ export const Pagination: FC<PaginationProps> = ({ currentPage, setCurrentPage, l
                 {getPaginationNumbers().map((pageNumber) => {
                     return (
 
-                        <button className="buttonClickNext" onClick={() => handleClickPage(pageNumber)} style={{ backgroundColor: `${currentPage == pageNumber ? 'red' : 'test'}` }}>
-                            <div className="pagination-1">{pageNumber}</div>
+                        <button className={`button-pagination${currentPage == pageNumber ? '-active' : ''}`} onClick={() => handleClickPage(pageNumber)}>
+                            {pageNumber}
                         </button>
 
                     )
@@ -63,27 +64,7 @@ export const Pagination: FC<PaginationProps> = ({ currentPage, setCurrentPage, l
 
 
 
-            {/* <div className="pagination1">
 
-                {[...Array(totalPages)].map((_, index) => (
-
-                    <button
-
-                        key={index}
-
-                        onClick={() => setCurrentPage(index + 1)}
-
-                        className={currentPage === index + 1 ? 'active' : ''}
-
-                    >
-
-                        {index + 1}
-
-                    </button>
-
-                ))}
-
-            </div> */}
         </div>
     )
 }
