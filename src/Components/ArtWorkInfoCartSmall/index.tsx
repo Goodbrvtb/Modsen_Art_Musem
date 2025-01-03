@@ -23,8 +23,6 @@ export const ArtWorkInfoCardOther: FC<ArtWorkInfoCardProps> = ({ artWork }) => {
         navigate(`${DETAIL_INFO}/${artWork.id}`);
     }
 
-    console.log(artWork, 'artWork1')
-
     return (<div className='other-gallery-card' onClick={handleCardClick}>
         <img className='other-image' title='other-image' src={artWork.imageUrl} />
         <div className="info-other">

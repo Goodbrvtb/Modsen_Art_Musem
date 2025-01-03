@@ -26,7 +26,7 @@ export interface UseArtWorksApiAxiosProps {
 
 export interface OtherGalleryProps { otherArtWorks: any[] }
 
-export interface SpecialGalleryProps { artWorks: any[] }
+
 
 export interface UseArtWorkApiAxiosProps {
     id: number

@@ -16,7 +16,7 @@ export const searchArtWorksApiAxios = async (inputData: string, currentPage: num
   })
     .then(function (data) {
       // обработка успешного запроса
-      console.log(data, 'axios');
+
       return data
     })
   return resultAxios.data
@@ -33,7 +33,6 @@ export const getArtWorksByIdApiAxios = async (artWorkId: number): Promise<ArtWor
   })
     .then(function (data) {
       // обработка успешного запроса
-      console.log(data, 'axiosget');
       return data
     })
   return resultAxios.data
@@ -48,7 +47,7 @@ export const getOtherArtWorksApiAxios = async (): Promise<SearchArtWorkType> => 
   })
     .then(function (data) {
       // обработка успешного запроса
-      console.log(data, 'axiosOther');
+
       return data
     })
   return resultAxios.data

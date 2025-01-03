@@ -11,11 +11,6 @@ export const Header: FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  useEffect(() => {
-    console.log('Current location is ', location);
-  }, [location]);
-
-
   const handleFavClick = () => {
     navigate(FAVORITE_ROUTE);
   };

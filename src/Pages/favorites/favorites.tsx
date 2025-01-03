@@ -8,6 +8,9 @@ import favoritesIcon from "../../assets/logos/favoritesIcon.svg";
 import './style.scss';
 
 export function FavoritesPage() {
+
+
+
     return (
         <div className="wrapper">
             <div className='content'>

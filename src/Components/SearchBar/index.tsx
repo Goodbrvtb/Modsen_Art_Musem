@@ -13,12 +13,11 @@ export const SearchBar: FC<SearchBarProps> = ({ setSearchValue }) => {
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchValue(event.target.value)
-    // console.log(inputData, "Inputdata")
   }
   const debounceHandleChange = useDebounce(handleChange, 1000)
 
   return (
-     <div className="search-bar">
+    <div className="search-bar">
       <input onChange={debounceHandleChange} type="text" placeholder="Search art, artist, work..." className="search-input" />
       <button className="search-button">
         <img alt="search" className="img-search" src={search}></img>

@@ -9,3 +9,5 @@ export const IMAGE_ENDPOINT = (id: number | string) =>
 
 export const SEARCH_ENDPOINT = (/*size: number,*/ q: string) =>
     `${ARTWORKS_ENDPOINT}/search?q=${q}&query[term][is_public_domain]=true`;
+
+export const FAVORITES_KEY = 'FAVORITES_KEY'

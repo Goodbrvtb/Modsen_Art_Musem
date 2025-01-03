@@ -12,7 +12,6 @@ export const useArtWorksApiAxios = ({ searchValue, selectedPage }: UseArtWorksAp
 
     useEffect(() => {                                   //при монтировании компонента отрабатывает хук и возвращает ссылку на картинку
         async function getArtWorks() {
-            console.log(selectedPage, "selectedPage")
             const { data, pagination } = await searchArtWorksApiAxios(searchValue, selectedPage)
             const artWorkFullInfo = await Promise.all(data.map(async ({ id }) => {
                 const { data } = await getArtWorksByIdApiAxios(id)

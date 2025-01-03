@@ -11,16 +11,15 @@ import { useGetOtherArtWorks } from '../../utils/hooks/useGetOtherArtWorks';
 import './style.scss';
 import { Pagination } from '../../Components/Pagination';
 import { useHandlePagination } from '../../utils/hooks/useHandlePagination';
+import { useHandleFavIdChange } from '../../utils/hooks/usehandleFavIdChange';
 
 export function HomePage() {
 
     const [searchValue, setSearchValue] = useState('')
     const { currentPage, handleCurrentPageChange } = useHandlePagination()
-    console.log(currentPage, 'currentPage')
     const { artWorksList, totalPages } = useArtWorksApiAxios({ searchValue, selectedPage: currentPage })
     const { otherArtWorks } = useGetOtherArtWorks()
-
-
+    const { favoritesIds, handleFavoritesChange } = useHandleFavIdChange()
 
     return (
         <div className="wrapper">
@@ -28,7 +27,7 @@ export function HomePage() {
                 <Header />
                 <Title title={<>Let's Find Some <span>Art</span> <br />Here!</>} />
                 <SearchBar setSearchValue={setSearchValue} />
-                <SpecialGallery artWorks={artWorksList} />
+                <SpecialGallery artWorks={artWorksList} favoritesIds={favoritesIds} handleFavoritesChange={handleFavoritesChange} />
                 <Pagination currentPage={currentPage} lastPage={totalPages} totalPages={totalPages} setCurrentPage={handleCurrentPageChange} />
                 <BodyTitleOther />
                 <OtherGallery otherArtWorks={otherArtWorks} />

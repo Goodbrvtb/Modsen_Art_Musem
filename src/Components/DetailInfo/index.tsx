@@ -17,8 +17,6 @@ export const DetailCart: FC = () => {
         return 'Not found'
     }
 
-    console.log(info, "work11")
-
     // const nacionality: string = info.data.artist_display.split(' ')
 
     return (
