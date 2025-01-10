@@ -2,23 +2,26 @@
     display: flex;
     width: 479px;
     height: 570px;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 .image-cart {
+    margin-left: 202px;
     display: flex;
-    width: 479px;
+    width: 497px;
     height: 570px;
     background-position: center center;
     background-size: cover;
+    justify-content: flex-end;
 }
 
 .fav-cart {
     display: flex;
     padding: 120px;
     align-items: center;
-    justify-content: space-evenly;
-
+    justify-content: flex-start;
+    width: auto;
+    gap: 80px;
 }
 
 .title-detailInfo {

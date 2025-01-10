@@ -5,18 +5,25 @@ export const useHandleFavIdChange = () => {
 
     const [favoritesIds, setFavoritesIds] = useState<any>([])  //data-само значение setData - функция для установки нового значения в data
 
-    function handleFavoritesChange(selectedId: number) {
+    function handleFavoritesChange(artWork: {
+        id: number;
+        title: string;
+        imageUrl: string;
+        artist_display: string;
+        is_public_domain: boolean;
+        artist_title: string;
+    }) {
         const favoritesIdsCurrent = [...favoritesIds];
-        const filteredFavoritesIds = favoritesIdsCurrent.filter((item) => (item !== selectedId))
+        const filteredFavoritesIds = favoritesIdsCurrent.filter((item) => (item.id !== artWork.id))
         console.log(favoritesIdsCurrent, 'favoritesIdsCurrent')
         console.log(filteredFavoritesIds, 'filteredFavoritesIds')
         if (favoritesIdsCurrent.length == 0 || favoritesIdsCurrent.length == filteredFavoritesIds.length) {
             console.log('setFavoritesIds')
             setFavoritesIds((prev) => {
-                return [...prev, selectedId]
+                return [...prev, artWork]
 
             })
-            filteredFavoritesIds.push(selectedId)
+            filteredFavoritesIds.push(artWork)
         } else {
             setFavoritesIds(filteredFavoritesIds)
 

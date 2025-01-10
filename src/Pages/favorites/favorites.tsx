@@ -5,10 +5,11 @@ import { Header } from '../../Components/Header'
 import { SectionTitle } from '../../Components/SectionTitle';
 import { Title } from '../../Components/Title'
 import favoritesIcon from "../../assets/logos/favoritesIcon.svg";
+import { useHandleFavIdChange } from '../../utils/hooks/usehandleFavIdChange';
 import './style.scss';
 
 export function FavoritesPage() {
-
+    const { favoritesIds, handleFavoritesChange } = useHandleFavIdChange()
 
 
     return (
@@ -18,7 +19,7 @@ export function FavoritesPage() {
                 <Title title={<>Here Are Your <br /><span><img className="icon" src={favoritesIcon} alt="dots icon"></img>Favorites!</span></>} />
                 <SectionTitle className='body-title body-title-favorite' title={<><span>Saved by you</span> <br />Your favorites list</>} />
                 <div className="other-gallery">
-                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((artWork) => <ArtWorkInfoCardOther artWork={artWork} />)}
+                    {favoritesIds.map((artWork) => <ArtWorkInfoCardOther artWork={artWork} handleFavoritesChange={handleFavoritesChange} isSelected={favoritesIds.some(item => item.id === artWork.id)} />)}
                 </div>
                 <Footer />
             </div>

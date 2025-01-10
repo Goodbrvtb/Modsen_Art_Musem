@@ -5,8 +5,22 @@ import { ArtWorkInfoCard } from '../ArtWorkInfoCard';
 
 interface SpecialGalleryProps {
   artWorks: any[],
-  favoritesIds: number[],
-  handleFavoritesChange: (id: number) => void
+  favoritesIds: {
+    id: number;
+    title: string;
+    imageUrl: string;
+    artist_display: string;
+    is_public_domain: boolean;
+    artist_title: string;
+  }[],
+  handleFavoritesChange: (artwork: {
+    id: number;
+    title: string;
+    imageUrl: string;
+    artist_display: string;
+    is_public_domain: boolean;
+    artist_title: string;
+  }) => void
 }
 
 export const SpecialGallery: FC<SpecialGalleryProps> = ({ artWorks, favoritesIds, handleFavoritesChange }) => {
@@ -16,7 +30,7 @@ export const SpecialGallery: FC<SpecialGalleryProps> = ({ artWorks, favoritesIds
       <div className="special-gallery">
         {artWorks.map((artWork) => <ArtWorkInfoCard artWork={artWork}
           handleFavoritesChange={handleFavoritesChange}
-          isSelected={favoritesIds.some(item => item === artWork.id)} />)}
+          isSelected={favoritesIds.some(item => item.id === artWork.id)} />)}
       </div>
     </>
 

@@ -24,7 +24,25 @@ export interface UseArtWorksApiAxiosProps {
     selectedPage: number,
 }
 
-export interface OtherGalleryProps { otherArtWorks: any[] }
+export interface OtherGalleryProps {
+    otherArtWorks: any[],
+    favoritesIds: {
+        id: number;
+        title: string;
+        imageUrl: string;
+        artist_display: string;
+        is_public_domain: boolean;
+        artist_title: string;
+    }[],
+    handleFavoritesChange: (artwork: {
+        id: number;
+        title: string;
+        imageUrl: string;
+        artist_display: string;
+        is_public_domain: boolean;
+        artist_title: string;
+    }) => void
+}
 
 
 
