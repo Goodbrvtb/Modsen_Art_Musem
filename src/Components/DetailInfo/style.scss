@@ -46,9 +46,7 @@
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    color: rgba(224, 164, 73, 1);
-
-
+    color: #e0a449ff
 }
 
 .years-detailInfo {
@@ -85,24 +83,25 @@
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    color: rgba(57, 57, 57, 1);
-
-
-
+    color: #393939ff;
 }
 
 .text-info {
+    margin-top: 32px;
     font-family: 'LexendDeca';
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 100%;
     line-height: 20px;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 
 }
 
 .text-info span {
-    color: rgba(224, 164, 73, 1);
+    color: #e0a449ff;
 
 }

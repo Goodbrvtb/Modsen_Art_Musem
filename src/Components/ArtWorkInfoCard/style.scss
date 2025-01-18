@@ -9,7 +9,7 @@
     position: absolute;
     width: 334px;
     height: 132px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #ffffffff;
     margin-left: 26px;
     bottom: 0px;
     display: flex;
@@ -40,7 +40,7 @@
     width: 59px;
     height: 59px;
     border-radius: 50%;
-    background: rgba(251, 215, 178, 0.3);
+    background: #fbd7b24c;
     justify-content: center;
     align-items: center;
 
@@ -80,7 +80,7 @@
     letter-spacing: -0.01em;
     text-align: left;
     text-decoration-skip-ink: none;
-    color: rgba(241, 121, 0, 1);
+    color: #f17900ff;
     font-weight: 400;
     overflow: hidden;
     text-overflow: ellipsis;

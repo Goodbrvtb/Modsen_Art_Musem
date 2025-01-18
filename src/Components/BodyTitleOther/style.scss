@@ -1,6 +1,6 @@
-.body-title-other{
-    font-family:'LexendDeca';
-    margin: 150px 0 40px 0;
+.body-title-other {
+    font-family: 'LexendDeca';
+    margin: 100px 0 40px 0;
     font-size: 64px;
     text-align: center;
     font-weight: 700;
@@ -8,15 +8,17 @@
     font-weight: 400;
     line-height: 40px;
 }
+
 .body-title-other p {
-    color: rgba(57, 57, 57, 1);
+    color: #393939ff;
     margin: 0;
 }
-.body-title-other p span{
+
+.body-title-other p span {
     text-align: center;
-    color: rgba(241, 121, 0, 1);
+    color: #f17900ff;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
-   
+
 }

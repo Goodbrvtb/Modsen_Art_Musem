@@ -10,7 +10,8 @@ import './style.scss';
 
 export function FavoritesPage() {
     const { favoritesIds, handleFavoritesChange } = useHandleFavIdChange()
-
+    const lengthFavoritesIds = favoritesIds.length
+    console.log(favoritesIds.length, "lengthFavoritesIds")
 
     return (
         <div className="wrapper">
@@ -19,6 +20,7 @@ export function FavoritesPage() {
                 <Title title={<>Here Are Your <br /><span><img className="icon" src={favoritesIcon} alt="dots icon"></img>Favorites!</span></>} />
                 <SectionTitle className='body-title body-title-favorite' title={<><span>Saved by you</span> <br />Your favorites list</>} />
                 <div className="other-gallery">
+                    {!lengthFavoritesIds && (<Title title={<>There are no favorites in your gallery. To add to favorites, click the bookmark icon on the picture. </>} />)}
                     {favoritesIds.map((artWork) => <ArtWorkInfoCardOther artWork={artWork} handleFavoritesChange={handleFavoritesChange} isSelected={favoritesIds.some(item => item.id === artWork.id)} />)}
                 </div>
                 <Footer />

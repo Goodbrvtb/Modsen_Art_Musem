@@ -30,5 +30,5 @@ export const useArtWorksApiAxios = ({ searchValue, selectedPage }: UseArtWorksAp
         void getArtWorks() // зачем void?? вызов функции но без вывода значения
     }, [searchValue, selectedPage])
 
-    return { artWorksList: data, totalPages, currentPage }
+    return { artWorksList: data, totalPages, currentPage, setData }
 }

@@ -12,14 +12,20 @@ import './style.scss';
 import { Pagination } from '../../Components/Pagination';
 import { useHandlePagination } from '../../utils/hooks/useHandlePagination';
 import { useHandleFavIdChange } from '../../utils/hooks/usehandleFavIdChange';
+import { SelectField } from '../../Components/SortComponent/SelectField';
+import { SortComponent } from '../../Components/SortComponent';
 
 export function HomePage() {
 
     const [searchValue, setSearchValue] = useState('')
     const { currentPage, handleCurrentPageChange } = useHandlePagination()
-    const { artWorksList, totalPages } = useArtWorksApiAxios({ searchValue, selectedPage: currentPage })
+    const { artWorksList, totalPages, setData } = useArtWorksApiAxios({ searchValue, selectedPage: currentPage })
     const { otherArtWorks } = useGetOtherArtWorks()
     const { favoritesIds, handleFavoritesChange } = useHandleFavIdChange()
+
+
+    console.log(artWorksList, 'sortartWorksList')
+
 
     return (
         <div className="wrapper">
@@ -27,6 +33,7 @@ export function HomePage() {
                 <Header />
                 <Title title={<>Let's Find Some <span>Art</span> <br />Here!</>} />
                 <SearchBar setSearchValue={setSearchValue} />
+                <SortComponent data={artWorksList} setData={setData} />
                 <SpecialGallery artWorks={artWorksList} favoritesIds={favoritesIds} handleFavoritesChange={handleFavoritesChange} />
                 <Pagination currentPage={currentPage} lastPage={totalPages} setCurrentPage={handleCurrentPageChange} />
                 <BodyTitleOther />

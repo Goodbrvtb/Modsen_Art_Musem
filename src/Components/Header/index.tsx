@@ -21,7 +21,7 @@ export const Header: FC = () => {
   return (
     <header className="header">
       <div className="top-bar">
-        <div className="logo" >
+        <div className="logo" onClick={handleHomeClick}>
           <img className="logo-img" src={logo} alt="" ></img>
         </div>
 

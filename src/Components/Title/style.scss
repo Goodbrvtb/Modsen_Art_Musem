@@ -1,25 +1,26 @@
- .home-title{
-    font-family:'LexendDeca';
-    margin: 120px 0 72px 0;
-    font-size: 67px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-weight: 700;
-    line-height:80px
+ .home-title {
+     font-family: 'LexendDeca';
+     margin: 120px 0 72px 0;
+     font-size: 67px;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     font-weight: 700;
+     line-height: 80px
+ }
 
-}
-.home-title p {
-    color: rgba(57, 57, 57, 1);
-    margin: 0;
-}
-.home-title p span{
-    color: rgba(241, 121, 0, 1);
+ .home-title p {
+     color: #393939ff;
+     margin: 0;
+ }
 
-}
-@font-face {
-    font-family: 'LexendDeca';  
-    src: url("../styles/LexendDecaRegular.woff") format("woff");
-    font-style: normal; 
-    font-weight: normal;
-     }
+ .home-title p span {
+     color: #f17900ff;
+ }
+
+ @font-face {
+     font-family: 'LexendDeca';
+     src: url("../styles/LexendDecaRegular.woff") format("woff");
+     font-style: normal;
+     font-weight: normal;
+ }

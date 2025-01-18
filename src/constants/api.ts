@@ -11,3 +11,5 @@ export const SEARCH_ENDPOINT = (/*size: number,*/ q: string) =>
     `${ARTWORKS_ENDPOINT}/search?q=${q}&query[term][is_public_domain]=true`;
 
 export const FAVORITES_KEY = 'FAVORITES_KEY'
+
+export const FALL_BACK_SRC = "../assets/logos/imageDefault.svg"

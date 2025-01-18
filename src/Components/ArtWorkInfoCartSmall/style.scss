@@ -4,8 +4,8 @@
     justify-content: space-evenly;
     width: 416px;
     height: 130px;
-    background-color: white;
-    //  color: rgba(240, 241, 241, 1)
+    background-color: #ffffffff;
+
 
 }
 
@@ -32,7 +32,7 @@
     width: 59px;
     height: 59px;
     border-radius: 50%;
-    background: rgba(251, 215, 178, 0.3);
+    background: #fbd7b24c;
     justify-content: center;
     align-items: center;
     gap: 8px;
@@ -53,7 +53,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    margin-top: 10px;
+
 }
 
 .author-other {
@@ -64,7 +64,7 @@
     letter-spacing: -0.01em;
     text-align: left;
     text-decoration-skip-ink: none;
-    color: rgba(241, 121, 0, 1);
+    color: #f17900ff;
     font-weight: 400;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -92,7 +92,7 @@
 .info-other {
     width: 219px;
     height: 98px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #ffffffff;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -106,7 +106,7 @@
     width: 219px;
     height: 98px;
     font-family: 'InterRegular';
-    flex-direction: column;
+    align-items: end;
 
 }
 

@@ -28,12 +28,12 @@ export const useHandleFavIdChange = () => {
             setFavoritesIds(filteredFavoritesIds)
 
         }
-        localStorage.setItem(FAVORITES_KEY, JSON.stringify(filteredFavoritesIds))
+        sessionStorage.setItem(FAVORITES_KEY, JSON.stringify(filteredFavoritesIds))
 
     }
 
     useEffect(() => {
-        const existedFavoritesIds = localStorage.getItem(FAVORITES_KEY)
+        const existedFavoritesIds = sessionStorage.getItem(FAVORITES_KEY)
         if (existedFavoritesIds) {
             setFavoritesIds(JSON.parse(existedFavoritesIds))
         }

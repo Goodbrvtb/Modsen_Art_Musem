@@ -12,7 +12,7 @@ export const useArtWorkApiAxios = ({ id }: UseArtWorkApiAxiosProps) => {
             const info = await getArtWorksByIdApiAxios(id)
             const fullInfo = {
                 ...info,
-                imgUrl: IMAGE_ENDPOINT(info.data.image_id)
+                imageUrl: IMAGE_ENDPOINT(info.data.image_id)
             }
 
             setInfo(fullInfo)
