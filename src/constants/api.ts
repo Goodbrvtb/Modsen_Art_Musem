@@ -12,4 +12,3 @@ export const SEARCH_ENDPOINT = (/*size: number,*/ q: string) =>
 
 export const FAVORITES_KEY = 'FAVORITES_KEY'
 
-export const FALL_BACK_SRC = "../assets/logos/imageDefault.svg"

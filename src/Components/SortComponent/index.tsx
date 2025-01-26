@@ -21,9 +21,9 @@ interface SortComponentProps {
 
 
 export const SortComponent: FC<SortComponentProps> = ({ data, setData }) => {
-    const [sortType, setSortType] = useState<'asc' | 'desc' | ''>('')
+    const [sortType, setSortType] = useState<'asc' | 'desc' | 'oldToNew' | 'newToOld' | ''>('')
 
-    const handleSort = (sortType: 'asc' | 'desc' | '') => {
+    const handleSort = (sortType: 'asc' | 'desc' | 'oldToNew' | 'newToOld' | '') => {
         const sortedData = sortDataByType({ data: data, type: sortType })
         setData(sortedData)
         setSortType(sortType)

@@ -1,7 +1,7 @@
-import { FC, ReactNode } from 'react';
+import { FC } from 'react';
 import './style.scss';
 
-interface SectionTitleProps { title: string | ReactNode, className?: string }
+interface SectionTitleProps { title: string, className: string }
 
 export const SectionTitle: FC<SectionTitleProps> = ({ title, className }) => {
   return (

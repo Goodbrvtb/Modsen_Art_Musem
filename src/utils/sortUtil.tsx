@@ -11,8 +11,9 @@ interface sortDataByTypeProps {
         artist_display: string;
         is_public_domain: boolean;
         artist_title: string;
+        date_end: number;
     }[],
-    type: 'asc' | 'desc' | ''
+    type: 'asc' | 'desc' | 'oldToNew' | 'newToOld'
 }
 
 export const sortDataByType = ({ data, type }: sortDataByTypeProps) => {
@@ -33,6 +34,24 @@ export const sortDataByType = ({ data, type }: sortDataByTypeProps) => {
             })
             return sortedData
         }
+
+        case 'oldToNew': {
+            const sortedData = [...data].sort((a, b) => {
+                return new Date(a.date_end).getTime() - new Date(b.date_end).getTime()
+            })
+            return sortedData
+        }
+        case 'newToOld': {
+            const sortedData = [...data].sort((a, b) => {
+                return new Date(b.date_end).getTime() - new Date(a.date_end).getTime()
+            })
+            return sortedData
+
+        }
+
+
+
+
 
         default: {
             return data

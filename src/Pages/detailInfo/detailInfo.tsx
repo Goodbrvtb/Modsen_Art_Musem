@@ -8,7 +8,6 @@ import { useHandleFavIdChange } from '../../utils/hooks/usehandleFavIdChange';
 export function DetailInfo() {
     const { favoritesIds, handleFavoritesChange } = useHandleFavIdChange()
     const { id } = useParams()
-    console.log(favoritesIds, 'detailInfo')
     return (
 
         <div>

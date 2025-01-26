@@ -22,6 +22,7 @@ export interface SearchArtWorkType {
 export interface UseArtWorksApiAxiosProps {
     searchValue: string,
     selectedPage: number,
+
 }
 
 export interface OtherGalleryProps {

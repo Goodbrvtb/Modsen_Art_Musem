@@ -3,11 +3,22 @@ import { useState } from 'react';
 export const useImageFallback = (src: string, FALL_BACK_S: string) => {
     const [imgSrc, setImgSrc] = useState<string>(src);
 
-    const handleError = () => {
-        setImgSrc(FALL_BACK_S);
+
+    const img = document.createElement('img');
+    img.src = src;
+
+    img.onload = function () {
+        setImgSrc(src);
+
     };
 
-    return { imgSrc, handleError };
+    img.onerror = function () {
+        setImgSrc(FALL_BACK_S);
+
+    };
+
+
+    return { imgSrc };
 };
 
 

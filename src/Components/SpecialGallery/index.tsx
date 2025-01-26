@@ -4,6 +4,7 @@ import './style.scss';
 import { ArtWorkInfoCard } from '../ArtWorkInfoCard';
 
 interface SpecialGalleryProps {
+
   artWorks: any[],
   favoritesIds: {
     id: number;

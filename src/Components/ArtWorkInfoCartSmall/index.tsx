@@ -3,6 +3,10 @@ import { DETAIL_INFO } from "../../routes";
 import './style.scss';
 import { FC } from "react";
 import { FavoritesIcon } from "../FavoritesIcon";
+import { useImageFallback } from "../../utils/hooks/useImageFallback";
+import DefaultImage from "../../assets/logos/imageDefault.svg"
+import { useSkeleton } from "../../utils/hooks/useSkeleton";
+import { CustomSkeleton } from "../Skeleton";
 
 interface ArtWorkInfoCardOtherProps {
     artWork: {
@@ -29,17 +33,22 @@ interface ArtWorkInfoCardOtherProps {
 
 export const ArtWorkInfoCardOther: FC<ArtWorkInfoCardOtherProps> = ({ artWork, isSelected, handleFavoritesChange }) => {
     const navigate = useNavigate()
+    const { imgSrc } = useImageFallback(artWork.imageUrl, DefaultImage);
+    const loadingImg = useSkeleton(artWork.imageUrl)
     const handleCardClick = () => {
         navigate(`${DETAIL_INFO}/${artWork.id}`);
     }
     const handleFavClick = () => {
         handleFavoritesChange(artWork)
-        console.log(artWork.id, "artWorkID")
+        console.log(DefaultImage, "artWorkID")
     }
-    console.log(artWork, "artWork")
-    console.log(isSelected, "isSelected")
+
+
+
     return (<div className='other-gallery-card' onClick={handleCardClick}>
-        <img className='other-image' title='other-image' src={artWork.imageUrl} />
+        {loadingImg ? (<CustomSkeleton className='custom-skeleton custom-skeleton-infoCartSmall' />) :
+            (<img className='other-image' title='other-image' src={imgSrc} />)}
+
         <div className="info-other">
             <div className="info-text-other">
                 <div className="title-other">{artWork.title}</div>
