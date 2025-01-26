@@ -1,0 +1,34 @@
+.body-title {
+    font-family: 'LexendDeca';
+    margin: 100px 0 40px 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px;
+
+    &-favorite {
+        margin: 29px 0 40px 0;
+    }
+}
+
+.body-title p {
+    color: #393939ff;
+    margin: 0;
+}
+
+.body-title p span {
+    text-align: center;
+    color: #f17900ff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+
+}
+
+@font-face {
+    font-family: 'LexendDeca';
+    src: url("../../styles/LexendDecaRegular.woff") format("woff");
+    font-style: normal;
+    font-weight: normal;
+}
