@@ -1,0 +1,42 @@
+.select {
+    display: flex;
+    padding-left: 16px;
+    font-family: 'InterRegular';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    border-radius: 4px;
+    background-color: #3939390c;
+    width: 190px;
+    height: 46px;
+}
+
+.select::-ms-expand {
+    display: none;
+}
+
+.select:hover {
+    border-color: #888;
+}
+
+.select:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 1px 3px #888;
+    color: #222;
+    outline: none;
+}
+
+.select option {
+    font-weight: normal;
+}
+
+
+.select-div {
+    padding: 24px 0 0 0;
+    display: flex;
+    width: 1280px;
+    justify-content: flex-end;
+
+
+
+}

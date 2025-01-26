@@ -1,0 +1,40 @@
+.custom-skeleton {
+    width: 387px;
+    height: 444px;
+    background-color: #403f3f;
+    border-radius: 8px;
+    margin: 10px;
+    animation: pulse 1.5s infinite;
+
+    &-detailInfo {
+        margin-left: 202px;
+        display: flex;
+        width: 497px;
+        height: 570px;
+        background-position: center center;
+        background-size: cover;
+        justify-content: flex-end;
+    }
+
+    &-infoCartSmall {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
+
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

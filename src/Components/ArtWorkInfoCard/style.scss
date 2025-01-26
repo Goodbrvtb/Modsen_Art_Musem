@@ -1,0 +1,114 @@
+.special-gallery-card {
+    width: 387px;
+    height: 444px;
+    background-position: center center;
+    background-size: cover;
+}
+
+.info {
+    position: absolute;
+    width: 334px;
+    height: 132px;
+    background-color: #ffffffff;
+    margin-left: 26px;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-end;
+    justify-content: center;
+    padding: 24px;
+    gap: 8px;
+}
+
+
+.info-text {
+    display: grid;
+    width: 219px;
+    height: 98px;
+    font-family: 'LexendDeca';
+    flex-direction: column;
+
+}
+
+
+
+.info-fav-button {
+    display: flex;
+    min-width: 20%;
+    width: 59px;
+    height: 59px;
+    border-radius: 50%;
+    background: #fbd7b24c;
+    justify-content: center;
+    align-items: center;
+
+    .img {
+        display: grid;
+        width: 24px;
+        height: 24px;
+    }
+
+    &-detail-info {
+        background: #FFFFFF;
+        margin-top: 15px;
+        margin-right: 18px;
+    }
+}
+
+.fav-icon {
+    width: 34px;
+}
+
+.title {
+    font-size: 17.54px;
+    font-weight: 500;
+    line-height: 26.32px;
+    letter-spacing: -0.03em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+.author {
+    font-family: 'LexendDeca';
+    font-size: 15.35px;
+    font-weight: 400;
+    line-height: 26.32px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    text-decoration-skip-ink: none;
+    color: #f17900ff;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+.public-domain {
+    margin-top: 17px;
+    font-family: 'LexendDeca';
+    font-size: 15.35px;
+    font-weight: 700;
+    line-height: 26.32px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    text-decoration-skip-ink: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+
+}
+
+
+
+@font-face {
+    font-family: 'LexendDeca';
+    src: url("../styles/LexendDecaRegular.woff") format("woff");
+    font-style: normal;
+    font-weight: normal;
+}
