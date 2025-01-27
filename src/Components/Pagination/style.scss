@@ -4,6 +4,10 @@
     width: 1280px;
     justify-content: flex-end;
 
+    @media screen and (max-device-width: 1280px) {
+        width: 100%;
+        justify-content: center;
+    }
 
 }
 
