@@ -1,15 +1,10 @@
 .search-bar {
   display: flex;
   align-items: center;
-  width: 39%;
+  width: 762px;
   height: 64px;
   border-radius: 16px;
   background-color: #3939390c;
-
-  @media screen and (max-device-width: 1280px) {
-    width: unset;
-  }
-
 }
 
 .search-input {
@@ -32,4 +27,8 @@
   padding: 10px;
   cursor: pointer;
   border-radius: 0 16px 16px 0;
+}
+
+.search-button svg {
+  fill: none;
 }
