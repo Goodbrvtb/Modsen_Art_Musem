@@ -21,17 +21,19 @@ interface SortComponentProps {
 
 
 export const SortComponent: FC<SortComponentProps> = ({ data, setData }) => {
-    const [sortType, setSortType] = useState<'asc' | 'desc' | 'oldToNew' | 'newToOld' | ''>('')
 
+    const [sortType, setSortType] = useState<'asc' | 'desc' | 'oldToNew' | 'newToOld' | ''>('')
     const handleSort = (sortType: 'asc' | 'desc' | 'oldToNew' | 'newToOld' | '') => {
         const sortedData = sortDataByType({ data: data, type: sortType })
         setData(sortedData)
         setSortType(sortType)
     }
-
-
-    return (<SelectField handleSort={handleSort} sortType={sortType}>
-
-    </SelectField>)
+    return (
+        <>
+            {data.length ? (
+                <SelectField handleSort={handleSort} sortType={sortType} ></SelectField >
+            ) : null}
+        </>
+    )
 
 }
