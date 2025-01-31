@@ -1,3 +1,8 @@
+$primary-color: #ffffffff;
+$primary-color-text: #f17900ff;
+$color-fav-button: #fbd7b24c;
+
+
 .special-gallery-card {
     width: 387px;
     height: 444px;
@@ -14,7 +19,7 @@
     position: absolute;
     width: 334px;
     height: 132px;
-    background-color: #ffffffff;
+    background-color: $primary-color;
     margin-left: 26px;
     bottom: 0px;
     display: flex;
@@ -54,7 +59,7 @@
     width: 59px;
     height: 59px;
     border-radius: 50%;
-    background: #fbd7b24c;
+    background: $color-fav-button;
     justify-content: center;
     align-items: center;
 
@@ -65,7 +70,7 @@
     }
 
     &-detail-info {
-        background: #FFFFFF;
+        background: $primary-color;
         margin-top: 15px;
         margin-right: 18px;
     }
@@ -94,7 +99,7 @@
     letter-spacing: -0.01em;
     text-align: left;
     text-decoration-skip-ink: none;
-    color: #f17900ff;
+    color: $primary-color-text;
     font-weight: 400;
     overflow: hidden;
     text-overflow: ellipsis;

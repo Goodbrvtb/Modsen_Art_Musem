@@ -72,6 +72,8 @@
   flex-wrap: nowrap;
   flex-direction: row;
   gap: 16px;
+
+
 }
 
 .a {
@@ -90,6 +92,13 @@ button {
 
 .close-menu-button {
   display: none;
+}
+
+@media screen and (max-device-width: 320px) {
+
+  .navigate-button {
+    padding-left: 60px;
+  }
 }
 
 @media screen and (max-device-width: 768px) {
@@ -142,7 +151,7 @@ button {
     display: block;
     width: 24px;
     height: 24px;
-    margin-right: 50px;
+    margin-right: 40px;
 
 
 

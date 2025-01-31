@@ -54,7 +54,7 @@ export const ArtWorkInfoCard: FC<ArtWorkInfoCardProps> = ({ className, artWork, 
 
     return (
         <div>
-            {loadingImg ? (<CustomSkeleton />) :
+            {loadingImg ? (<CustomSkeleton className='custom-skeleton' />) :
 
 
                 (<div>
