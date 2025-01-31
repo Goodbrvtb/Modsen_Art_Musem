@@ -25,14 +25,16 @@ interface SpecialGalleryProps {
 }
 
 export const SpecialGallery: FC<SpecialGalleryProps> = ({ artWorks, favoritesIds, handleFavoritesChange }) => {
+
+
   return (
     <>
       <SectionTitle title={<><span>Topics for you</span> <br />Our special gallery!</>} />
-      <div className="special-gallery">
+      {artWorks.length ? (<div className="special-gallery">
         {artWorks.map((artWork) => <ArtWorkInfoCard artWork={artWork}
           handleFavoritesChange={handleFavoritesChange}
           isSelected={favoritesIds.some(item => item.id === artWork.id)} />)}
-      </div>
+      </div>) : (<SectionTitle title={<>Nothing found!</>} />)}
     </>
 
   );

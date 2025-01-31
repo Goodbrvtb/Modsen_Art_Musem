@@ -23,8 +23,6 @@ export function HomePage() {
     const { favoritesIds, handleFavoritesChange } = useHandleFavIdChange()
 
 
-    console.log(artWorksList, 'sortartWorksList')
-
 
     return (
         <div className="wrapper">

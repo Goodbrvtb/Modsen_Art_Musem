@@ -70,9 +70,9 @@ export const DetailCart: FC<DetailCartProps> = ({ isSelected, handleFavoritesCha
 
     return (
         <div className='fav-cart'>
-            <div> {loadingImg ? (<CustomSkeleton className='custom-skeleton custom-skeleton-detailInfo' />) :
+            <div className='div-skeleton'> {loadingImg ? (<CustomSkeleton className='custom-skeleton custom-skeleton-detailInfo' />) :
                 (<div className="image-cart" style={{ backgroundImage: `url(${imgSrc})` }} >
-                    <div onClick={(e) => {
+                    <div className='stop-propagation' onClick={(e) => {
                         e.stopPropagation()
                     }}>
                         <button className="info-fav-button info-fav-button-detail-info" onClick={handleFavClick}>

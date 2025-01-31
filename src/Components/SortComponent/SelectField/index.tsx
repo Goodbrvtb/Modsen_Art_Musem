@@ -1,5 +1,7 @@
 import { ChangeEvent, FC, } from "react"
 import '../SelectField/style.scss'
+import { sortDataByType } from "../../../utils/sortUtil";
+
 
 interface SelectFieldProps {
     handleSort: (sortType: 'asc' | 'desc' | 'oldToNew' | 'newToOld' | '') => void,
@@ -10,6 +12,7 @@ interface SelectFieldProps {
 
 
 export const SelectField: FC<SelectFieldProps> = ({ handleSort, sortType }) => {
+
     const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
         handleSort(event.target.value as 'asc' | 'desc' | 'oldToNew' | 'newToOld' | '')
     }
