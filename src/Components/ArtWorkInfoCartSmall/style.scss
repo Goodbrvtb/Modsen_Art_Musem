@@ -1,10 +1,13 @@
+@import "../../styles/colors.scss";
+@import "../../styles/fonts.scss";
+
 .other-gallery-card {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     width: 416px;
     height: 130px;
-    background-color: #ffffffff;
+    background-color: $color-white;
 
     @media screen and (max-device-width: 1280px) {
         width: unset;
@@ -24,7 +27,6 @@
     display: grid;
     width: 219px;
     height: 98px;
-    font-family: 'InterRegular';
     flex-direction: column;
 
 }
@@ -36,7 +38,7 @@
     width: 59px;
     height: 59px;
     border-radius: 50%;
-    background: #fbd7b24c;
+    background: $color-fav-button;
     justify-content: center;
     align-items: center;
     gap: 8px;
@@ -61,14 +63,13 @@
 }
 
 .author-other {
-    font-family: 'InterRegular';
     font-size: 15.35px;
     font-weight: 400;
     line-height: 26.32px;
     letter-spacing: -0.01em;
     text-align: left;
     text-decoration-skip-ink: none;
-    color: #f17900ff;
+    color: $primary-color-text;
     font-weight: 400;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -78,7 +79,6 @@
 
 .public-domain-other {
     margin-top: 17px;
-    font-family: 'InterRegular';
     font-size: 15.35px;
     font-weight: 700;
     line-height: 26.32px;
@@ -96,7 +96,7 @@
 .info-other {
     width: 219px;
     height: 98px;
-    background-color: #ffffffff;
+    background-color: $color-white;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -117,14 +117,7 @@
     display: grid;
     width: 219px;
     height: 98px;
-    font-family: 'InterRegular';
+    font-family: $font-family-minor;
     align-items: end;
 
-}
-
-@font-face {
-    font-family: 'InterRegular';
-    src: url("../styles/") format("woff");
-    font-style: normal;
-    font-weight: normal;
 }

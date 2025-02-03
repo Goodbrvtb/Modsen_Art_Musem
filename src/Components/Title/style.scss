@@ -1,34 +1,37 @@
- .home-title {
-     font-family: 'LexendDeca';
-     margin: 120px 0 72px 0;
-     font-size: 67px;
-     justify-content: center;
-     align-items: center;
-     text-align: center;
-     font-weight: 700;
-     line-height: 80px
- }
+@import "../../styles/fonts.scss";
+@import "../../styles/colors.scss";
 
- @media screen and (max-device-width: 768px) {
-     .home-title {
-         //  font-size: 40px;
-         line-height: 50px;
-         font-size: 7vw;
-     }
- }
+.home-title {
+    font-family: $font-family-primary;
+    margin: 120px 0 72px 0;
+    font-size: 67px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 700;
+    line-height: 80px
+}
 
- .home-title p {
-     color: #393939ff;
-     margin: 0;
- }
+@media screen and (max-device-width: 768px) {
+    .home-title {
+        //  font-size: 40px;
+        line-height: 50px;
+        font-size: 7vw;
+    }
+}
 
- .home-title p span {
-     color: #f17900ff;
- }
+.home-title p {
+    color: $color-text;
+    margin: 0;
+}
 
- @font-face {
-     font-family: 'LexendDeca';
-     src: url("../styles/LexendDecaRegular.woff") format("woff");
-     font-style: normal;
-     font-weight: normal;
- }
+.home-title p span {
+    color: $primary-color-text;
+}
+
+@font-face {
+    font-family: $font-family-primary;
+    src: url("../styles/LexendDecaRegular.woff") format("woff");
+    font-style: normal;
+    font-weight: normal;
+}

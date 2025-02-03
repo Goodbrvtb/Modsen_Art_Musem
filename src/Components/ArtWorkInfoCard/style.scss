@@ -1,6 +1,6 @@
-$primary-color: #ffffffff;
-$primary-color-text: #f17900ff;
-$color-fav-button: #fbd7b24c;
+@import "../../styles/colors.scss";
+@import "../../styles/fonts.scss";
+// $primary-color: #ffffff;
 
 
 .special-gallery-card {
@@ -19,7 +19,7 @@ $color-fav-button: #fbd7b24c;
     position: absolute;
     width: 334px;
     height: 132px;
-    background-color: $primary-color;
+    background-color: $color-white;
     margin-left: 26px;
     bottom: 0px;
     display: flex;
@@ -46,7 +46,7 @@ $color-fav-button: #fbd7b24c;
     display: grid;
     width: 219px;
     height: 98px;
-    font-family: 'LexendDeca';
+    font-family: $font-family-primary;
     flex-direction: column;
 
 }
@@ -70,7 +70,7 @@ $color-fav-button: #fbd7b24c;
     }
 
     &-detail-info {
-        background: $primary-color;
+        background: $color-white;
         margin-top: 15px;
         margin-right: 18px;
     }
@@ -92,7 +92,7 @@ $color-fav-button: #fbd7b24c;
 }
 
 .author {
-    font-family: 'LexendDeca';
+    font-family: $font-family-primary;
     font-size: 15.35px;
     font-weight: 400;
     line-height: 26.32px;
@@ -109,7 +109,7 @@ $color-fav-button: #fbd7b24c;
 
 .public-domain {
     margin-top: 17px;
-    font-family: 'LexendDeca';
+    font-family: $font-family-primary;
     font-size: 15.35px;
     font-weight: 700;
     line-height: 26.32px;
@@ -121,13 +121,4 @@ $color-fav-button: #fbd7b24c;
     white-space: nowrap;
 
 
-}
-
-
-
-@font-face {
-    font-family: 'LexendDeca';
-    src: url("../styles/LexendDecaRegular.woff") format("woff");
-    font-style: normal;
-    font-weight: normal;
 }

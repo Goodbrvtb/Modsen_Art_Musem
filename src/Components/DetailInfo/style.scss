@@ -1,3 +1,6 @@
+@use "../../styles/colors.scss" as colors;
+@use "../../styles/fonts.scss" as fonts;
+
 .info-cart {
     display: flex;
     width: 100%;
@@ -14,7 +17,6 @@
     background-position: center center;
     background-size: cover;
     justify-content: flex-end;
-    background-image: url("../../assets/logos/imageDefault.svg");
 }
 
 .fav-cart {
@@ -24,14 +26,14 @@
     justify-content: flex-start;
     width: auto;
     gap: 80px;
+
 }
 
 .title-detailInfo {
     width: 100%;
     max-width: 640px;
     height: auto;
-    // height: 80px;
-    font-family: 'LexendDeca';
+    font-family: fonts.$font-family-primary;
     font-size: 32px;
     font-weight: 400;
     line-height: 40px;
@@ -43,7 +45,7 @@
 }
 
 .author-detailInfo {
-    font-family: 'LexendDeca';
+    font-family: fonts.$font-family-primary;
     font-size: 24px;
     font-weight: 400;
     line-height: 30px;
@@ -58,7 +60,7 @@
     max-width: 140px;
     height: 19px;
     padding: 10px;
-    font-family: 'LexendDeca';
+    font-family: fonts.$font-family-primary;
     font-size: 16px;
     font-weight: 700;
     line-height: 20px;
@@ -83,19 +85,19 @@
     width: 100%;
     max-width: 401px;
     height: 40px;
-    font-family: 'LexendDeca';
+    font-family: fonts.$font-family-primary;
     font-size: 32px;
     font-weight: 400;
     line-height: 40px;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    color: #393939ff;
+    color: colors.$color-text;
 }
 
 .text-info {
     margin-top: 32px;
-    font-family: 'LexendDeca';
+    font-family: fonts.$font-family-primary;
     font-size: 16px;
     font-weight: 100%;
     line-height: 20px;
@@ -121,8 +123,7 @@
 
     .image-cart {
         margin-left: 0px;
-        width: 497px;
-        height: 570px;
+
     }
 
     .info-title {
@@ -164,10 +165,9 @@
 
     .image-cart {
         display: flex;
-        height: auto;
+
         max-width: 340px;
-        max-height: auto;
-        height: 570px;
+        max-height: 400px;
         margin-left: 0px;
         background-size: cover;
         background-repeat: no-repeat;
@@ -180,7 +180,7 @@
         max-width: 497px;
         height: 570px;
         justify-content: flex-start;
-        font-size: clamp(1rem, 2vw + 1rem, 3rem);
+        font-size: clamp(1rem, calc(2vw + 1rem), 3rem);
     }
 
     .title-detailInfo {
@@ -201,26 +201,6 @@
 
     .overview-div {
         margin-top: 20px;
-
-
-
     }
 
-    // .div-skeleton {
-    //     width: 100%;
-    //     max-width: 497px;
-    //     height: auto;
-    //     height: 570px;
-
-    // }
-
-    // .stop-propagation {
-    //     width: 59px;
-    //     height: auto;
-    //     // position: absolute; // Позиционирование относительно .container
-    //     // top: 15px; // Расположение сверху
-    //     // right: 30px; // Расположение слева
-
-
-    // }
 }
