@@ -1,11 +1,11 @@
 import { FC, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './style.scss';
-import { useArtWorkApiAxios } from '../../utils/hooks/useGetDetailInfo';
+import { useArtWorkApiAxios } from '@utils/hooks/useGetDetailInfo';
 import { FavoritesIcon } from '../FavoritesIcon';
-import { useImageFallback } from '../../utils/hooks/useImageFallback';
-import FALL_BACK_SRC from "../../assets/logos/imageDefault.svg";
-import { useSkeleton } from '../../utils/hooks/useSkeleton';
+import { useImageFallback } from '@utils/hooks/useImageFallback';
+import fallBackSrc from "@assets/images/image-default.svg";
+import { useSkeleton } from '@utils/hooks/useSkeleton';
 import { CustomSkeleton } from '../Skeleton';
 interface DetailCartProps {
 
@@ -43,7 +43,7 @@ export const DetailCart: FC<DetailCartProps> = ({ isSelected, handleFavoritesCha
     const { id } = useParams()
     const [artwork, setArtwork] = useState<any>(null)
     const { info } = useArtWorkApiAxios({ id: Number(id) })
-    const { imgSrc } = useImageFallback(info?.imageUrl, FALL_BACK_SRC);
+    const { imgSrc } = useImageFallback(info?.imageUrl, fallBackSrc);
     const loadingImg = useSkeleton(imgSrc)
     useEffect(() => {
         if (info?.data && info?.imageUrl) {

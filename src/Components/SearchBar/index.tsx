@@ -1,7 +1,7 @@
 
 import { ChangeEvent, FC, useState } from "react";
-import search from "../../assets/logos/search.svg";
-import { useDebounce } from "../../utils/hooks/useDebounce";
+import search from "@assets/icons/search.svg";
+import { useDebounce } from "@utils/hooks/useDebounce";
 import './style.scss';
 
 interface SearchBarProps {

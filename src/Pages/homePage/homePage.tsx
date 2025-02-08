@@ -1,18 +1,18 @@
 import { useState } from 'react';
-import { BodyTitleOther } from '../../Components/BodyTitleOther/index';
-import { Footer } from '../../Components/Footer/index';
-import { Header } from '../../Components/Header/index';
-import { OtherGallery } from '../../Components/OtherGallery/index';
-import { SearchBar } from '../../Components/SearchBar/index';
-import { Title } from '../../Components/Title/index';
-import { useArtWorksApiAxios } from '../../utils/hooks/useAxiosArtWorks';
-import { SpecialGallery } from '../../Components/SpecialGallery';
-import { useGetOtherArtWorks } from '../../utils/hooks/useGetOtherArtWorks';
+import { BodyTitleOther } from '@components/BodyTitleOther/index.tsx';
+import { Footer } from '@components/Footer/index';
+import { Header } from '@components/Header';
+import { OtherGallery } from '@components/OtherGallery/index';
+import { SearchBar } from '@components/SearchBar/index';
+import { Title } from '@components/Title/index';
+import { useArtWorksApiAxios } from '@utils/hooks/useAxiosArtWorks';
+import { SpecialGallery } from '@components/SpecialGallery';
+import { useGetOtherArtWorks } from '@utils/hooks/useGetOtherArtWorks';
 import './style.scss';
-import { Pagination } from '../../Components/Pagination';
-import { useHandlePagination } from '../../utils/hooks/useHandlePagination';
-import { useHandleFavIdChange } from '../../utils/hooks/usehandleFavIdChange';
-import { SortComponent } from '../../Components/SortComponent';
+import { Pagination } from '@components/Pagination';
+import { useHandlePagination } from '@utils/hooks/useHandlePagination';
+import { useHandleFavIdChange } from '@utils/hooks/usehandleFavIdChange';
+import { SortComponent } from '@components/SortComponent';
 
 export function HomePage() {
 
