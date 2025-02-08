@@ -2,11 +2,11 @@ import { FC, ReactNode } from "react";
 import './style.scss';
 import { DETAIL_INFO } from "../../routes";
 import { useNavigate } from "react-router-dom";
-import { FavoritesIcon } from "../FavoritesIcon";
-import { useImageFallback } from "../../utils/hooks/useImageFallback";
-import FALL_BACK_SRC from "../../assets/logos/imageDefault.svg"
-import { useSkeleton } from "../../utils/hooks/useSkeleton";
-import { CustomSkeleton } from "../Skeleton/index"
+import { FavoritesIcon } from "@components/FavoritesIcon";
+import { useImageFallback } from "@utils/hooks/useImageFallback";
+import fallBackSrc from "@assets/images/image-default.svg"
+import { useSkeleton } from "@utils/hooks/useSkeleton";
+import { CustomSkeleton } from "@components/Skeleton/index"
 
 interface ArtWorkInfoCardProps {
 
@@ -36,7 +36,7 @@ interface ArtWorkInfoCardProps {
 
 export const ArtWorkInfoCard: FC<ArtWorkInfoCardProps> = ({ className, artWork, isSelected, handleFavoritesChange }) => {
 
-    const { imgSrc } = useImageFallback(artWork.imageUrl, FALL_BACK_SRC);
+    const { imgSrc } = useImageFallback(artWork.imageUrl, fallBackSrc);
     const loadingImg = useSkeleton(artWork.imageUrl)
     const navigate = useNavigate()
     const handleCardClick = () => {

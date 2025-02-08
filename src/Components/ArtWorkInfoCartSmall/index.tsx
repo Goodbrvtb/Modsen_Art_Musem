@@ -2,10 +2,10 @@ import { useNavigate } from "react-router-dom";
 import { DETAIL_INFO } from "../../routes";
 import './style.scss';
 import { FC } from "react";
-import { FavoritesIcon } from "../FavoritesIcon";
-import { useImageFallback } from "../../utils/hooks/useImageFallback";
-import DefaultImage from "../../assets/logos/imageDefault.svg"
-import { useSkeleton } from "../../utils/hooks/useSkeleton";
+import { FavoritesIcon } from "@components/FavoritesIcon";
+import { useImageFallback } from "@utils/hooks/useImageFallback";
+import DefaultImage from "@assets/images/image-default.svg"
+import { useSkeleton } from "@utils/hooks/useSkeleton";
 import { CustomSkeleton } from "../Skeleton";
 
 interface ArtWorkInfoCardOtherProps {

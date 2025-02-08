@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import './style.scss';
 import { ArtWorkInfoCardOther } from '../ArtWorkInfoCartSmall';
-import { OtherGalleryProps } from '../../utils/types';
+import { OtherGalleryProps } from '@utils/types';
 
 
 

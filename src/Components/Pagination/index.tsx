@@ -1,6 +1,6 @@
 import { FC } from "react";
 import './style.scss';
-import shapeNext from "../../assets/logos/shapeNext.svg";
+import shapeNext from "@assets/icons/shape-next.svg";
 
 interface PaginationProps {
     currentPage: number,

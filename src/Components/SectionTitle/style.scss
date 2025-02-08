@@ -1,5 +1,8 @@
+@import "../../styles/fonts.scss";
+@import "../../styles/colors.scss";
+
 .body-title {
-    font-family: 'LexendDeca';
+    font-family: $font-family-primary;
     margin: 100px 0 40px 0;
     text-align: center;
     font-weight: 700;
@@ -13,13 +16,13 @@
 }
 
 .body-title p {
-    color: #393939ff;
+    color: $color-text;
     margin: 0;
 }
 
 .body-title p span {
     text-align: center;
-    color: #f17900ff;
+    color: $primary-color-text;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
@@ -27,7 +30,7 @@
 }
 
 @font-face {
-    font-family: 'LexendDeca';
+    font-family: $font-family-primary;
     src: url("../../styles/LexendDecaRegular.woff") format("woff");
     font-style: normal;
     font-weight: normal;
