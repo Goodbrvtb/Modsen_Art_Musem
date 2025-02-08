@@ -1,6 +1,6 @@
 import { ChangeEvent, FC, } from "react"
 import '../SelectField/style.scss'
-import { sortDataByType } from "../../../utils/sortUtil";
+import { sortDataByType } from "../@utils/sortUtil";
 
 
 interface SelectFieldProps {

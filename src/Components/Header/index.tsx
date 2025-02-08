@@ -1,12 +1,12 @@
 import { FC, useEffect, useState } from 'react';
 import { useLocation, useNavigate } from "react-router-dom";
-import bookmark from "../../assets/logos/bookmark.svg";
-import homeimg from "../../assets/logos/home.svg";
-import logo from "../../assets/logos/museum-logo.svg";
+import bookmark from "@assets/icons/bookmark.svg";
+import homeimg from "@assets/icons/home.svg";
+import logo from "@assets/icons/museum-logo.svg";
 import { FAVORITE_ROUTE, HOME_ROUTE } from "../../routes";
 import './style.scss';
-import iconBurgerMenu from "../../assets/logos/burgerButton.svg"
-import closeBurgerMenu from "../../assets/logos/closeBurgerButton.svg"
+import iconBurgerMenu from "@assets/icons/burger-button.svg"
+import closeBurgerMenu from "@assets/icons/close-burger-button.svg"
 
 
 export const Header: FC = () => {
@@ -53,7 +53,7 @@ export const Header: FC = () => {
 
         </div>
         <button className='header-menu-button' onClick={() => setOpen(!isOpen)}>
-          <img src={iconBurgerMenu} alt="burgerButton"></img>
+          <img src={iconBurgerMenu} alt="burger-button"></img>
         </button>
       </div>
     </header >
