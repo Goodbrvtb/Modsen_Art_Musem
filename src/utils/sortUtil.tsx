@@ -1,8 +1,3 @@
-
-
-
-
-
 interface sortDataByTypeProps {
     data: {
         id: number;

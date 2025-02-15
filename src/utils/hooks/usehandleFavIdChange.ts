@@ -3,7 +3,7 @@ import { FAVORITES_KEY } from "../../constants/api"
 
 export const useHandleFavIdChange = () => {
 
-    const [favoritesIds, setFavoritesIds] = useState<any>([])  //data-само значение setData - функция для установки нового значения в data
+    const [favoritesIds, setFavoritesIds] = useState<any>([])
 
     function handleFavoritesChange(artWork: {
         id: number;

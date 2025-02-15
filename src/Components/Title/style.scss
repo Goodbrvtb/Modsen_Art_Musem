@@ -1,37 +1,29 @@
-@import "../../styles/fonts.scss";
-@import "../../styles/colors.scss";
+@import '../../styles/fonts.scss';
+@import '../../styles/colors.scss';
 
 .home-title {
-    font-family: $font-family-primary;
-    margin: 120px 0 72px 0;
-    font-size: 67px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-weight: 700;
-    line-height: 80px
+  font-family: $font-family-primary;
+  margin: 120px 0 72px 0;
+  font-size: 67px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+  line-height: 80px;
 }
 
 @media screen and (max-device-width: 768px) {
-    .home-title {
-        //  font-size: 40px;
-        line-height: 50px;
-        font-size: 7vw;
-    }
+  .home-title {
+    line-height: 50px;
+    font-size: 7vw;
+  }
 }
 
 .home-title p {
-    color: $color-text;
-    margin: 0;
+  color: $color-text;
+  margin: 0;
 }
 
 .home-title p span {
-    color: $primary-color-text;
-}
-
-@font-face {
-    font-family: $font-family-primary;
-    src: url("../styles/LexendDecaRegular.woff") format("woff");
-    font-style: normal;
-    font-weight: normal;
+  color: $primary-color-text;
 }

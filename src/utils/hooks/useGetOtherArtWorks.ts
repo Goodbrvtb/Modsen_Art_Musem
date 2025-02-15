@@ -3,9 +3,9 @@ import { getArtWorksByIdApiAxios, getOtherArtWorksApiAxios } from "../apiApp"
 import { IMAGE_ENDPOINT } from "../../constants/api"
 
 export const useGetOtherArtWorks = () => {
-    const [data, setData] = useState<any>([])  //data-само значение setData - функция для установки нового значения в data
+    const [data, setData] = useState<any>([])
 
-    useEffect(() => {                                   //при монтировании компонента отрабатывает хук и возвращает ссылку на картинку
+    useEffect(() => {
         async function getArtWorks() {
             const artWorks = await getOtherArtWorksApiAxios()
             const artWorkFullInfo = await Promise.all(artWorks.data.map(async ({ id }) => {

@@ -32,16 +32,17 @@ export const SearchBar: FC<SearchBarProps> = ({ setSearchValue }) => {
   const debounceHandleChange = useDebounce(handleChange, 1000)
 
   return (
-    <div className="search-bar">
+    <><div className="search-bar">
       <input type="text" onChange={debounceHandleChange} placeholder="Search art, artist, work..." className="search-input" />
-      {showError && (
-        <p className="search-bar-error">Only Latin alphabet and numbers!</p>
-      )}
+
       <button className="search-button">
         <img alt="search" className="img-search" src={search}></img>
       </button>
     </div>
-
+      <div>{showError && (
+        <p className="search-bar-error">Only Latin alphabet and numbers!</p>
+      )}</div>
+    </>
   );
 
 }

@@ -5,17 +5,12 @@ export const useSkeleton = (src: string) => {
 
     const img = document.createElement('img');
     img.src = src;
-
     img.onload = function () {
         setLoading(false);
-
     };
-
     img.onerror = function () {
         setLoading(false);
     };
-
-
     return loading;
 };
 
