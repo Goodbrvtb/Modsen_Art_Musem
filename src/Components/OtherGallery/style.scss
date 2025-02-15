@@ -1,16 +1,16 @@
- .other-gallery {
-   display: flex;
-   width: 1280px;
-   height: 100%;
-   flex-direction: row;
-   justify-content: flex-start;
-   flex-wrap: wrap;
-   gap: 16px;
+.other-gallery {
+  display: flex;
+  width: 1280px;
+  height: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
 
-   @media screen and (max-device-width: 1280px) {
-     display: flex;
-     width: 100%;
-     height: 100%;
-     justify-content: center;
-   }
- }
+  @media screen and (max-device-width: 1280px) {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+  }
+}

@@ -1,13 +1,11 @@
-import { FC } from "react"
+import { FC } from 'react';
+
 import './style.scss';
 
 interface CustomSkeletonProps {
-    className: string,
+  className: string;
 }
 
 export const CustomSkeleton: FC<CustomSkeletonProps> = ({ className }) => {
-    return (
-        <div className={className ? className : "custom-skeleton"} >
-        </div>
-    );
+  return <div className={className ? className : 'custom-skeleton'}></div>;
 };

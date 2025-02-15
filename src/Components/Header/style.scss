@@ -6,10 +6,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(90deg,
-      #343333ff 17%,
-      #484848ff 59%,
-      #282828ff 99%);
+  background: linear-gradient(
+    90deg,
+    #343333ff 17%,
+    #484848ff 59%,
+    #282828ff 99%
+  );
 }
 
 .top-bar {
@@ -34,7 +36,6 @@
   display: flex;
   height: 24px;
   width: 24px;
-
 }
 
 .favorites {
@@ -46,7 +47,6 @@
   font-weight: 400;
   line-height: 21.78px;
   text-align: left;
-
 }
 
 .home {
@@ -58,7 +58,6 @@
   font-weight: 400;
   line-height: 21.78px;
   text-align: left;
-
 }
 
 .fav-and-home-button {
@@ -72,13 +71,11 @@
   flex-wrap: nowrap;
   flex-direction: row;
   gap: 16px;
-
-
 }
 
 .a {
   color: #ffffffff !important;
-  text-decoration: none
+  text-decoration: none;
 }
 
 button {
@@ -95,7 +92,6 @@ button {
 }
 
 @media screen and (max-device-width: 320px) {
-
   .navigate-button {
     padding-left: 60px;
   }
@@ -111,10 +107,12 @@ button {
     flex-direction: column;
     width: 220px;
     height: 100%;
-    background: linear-gradient(90deg,
-        #343333ff 17%,
-        #484848ff 59%,
-        #282828ff 99%);
+    background: linear-gradient(
+      90deg,
+      #343333ff 17%,
+      #484848ff 59%,
+      #282828ff 99%
+    );
     border: 2px solid black;
     border-top-right-radius: 16px;
     border-bottom-right-radius: 16px;
@@ -132,7 +130,6 @@ button {
   }
 
   .close-menu-button {
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -146,14 +143,10 @@ button {
     transform: translateX(100%);
   }
 
-
   .header-menu-button {
     display: block;
     width: 24px;
     height: 24px;
     margin-right: 40px;
-
-
-
   }
 }

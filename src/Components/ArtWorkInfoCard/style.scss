@@ -1,124 +1,113 @@
-@import "../../styles/colors.scss";
-@import "../../styles/fonts.scss";
+@import '../../styles/colors.scss';
+@import '../../styles/fonts.scss';
 // $primary-color: #ffffff;
 
-
 .special-gallery-card {
-    width: 387px;
-    height: 444px;
-    background-position: center center;
-    background-size: cover;
+  width: 387px;
+  height: 444px;
+  background-position: center center;
+  background-size: cover;
 
-    @media screen and (max-device-width: 1280px) {
-        width: 320px;
-        height: 360px;
-    }
+  @media screen and (max-device-width: 1280px) {
+    width: 320px;
+    height: 360px;
+  }
 }
 
 .info {
-    position: absolute;
-    width: 334px;
-    height: 132px;
-    background-color: $color-white;
-    margin-left: 26px;
-    bottom: 0px;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: flex-end;
-    justify-content: center;
-    padding: 24px;
-    gap: 8px;
+  position: absolute;
+  width: 334px;
+  height: 132px;
+  background-color: $color-white;
+  margin-left: 26px;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: flex-end;
+  justify-content: center;
+  padding: 24px;
+  gap: 8px;
 
-
-    @media screen and (max-device-width: 1280px) {
-        top: 70%;
-        position: relative;
-        width: 300px;
-        margin-left: 10px;
-    }
+  @media screen and (max-device-width: 1280px) {
+    top: 70%;
+    position: relative;
+    width: 300px;
+    margin-left: 10px;
+  }
 }
-
-
 
 .info-text {
-    display: grid;
-    width: 219px;
-    height: 98px;
-    font-family: $font-family-primary;
-    flex-direction: column;
-
+  display: grid;
+  width: 219px;
+  height: 98px;
+  font-family: $font-family-primary;
+  flex-direction: column;
 }
 
-
-
 .info-fav-button {
-    display: flex;
-    min-width: 20%;
-    width: 59px;
-    height: 59px;
-    border-radius: 50%;
-    background: $color-fav-button;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  min-width: 20%;
+  width: 59px;
+  height: 59px;
+  border-radius: 50%;
+  background: $color-fav-button;
+  justify-content: center;
+  align-items: center;
 
-    .img {
-        display: grid;
-        width: 24px;
-        height: 24px;
-    }
+  .img {
+    display: grid;
+    width: 24px;
+    height: 24px;
+  }
 
-    &-detail-info {
-        background: $color-white;
-        margin-top: 15px;
-        margin-right: 18px;
-    }
+  &-detail-info {
+    background: $color-white;
+    margin-top: 15px;
+    margin-right: 18px;
+  }
 }
 
 .fav-icon {
-    width: 34px;
+  width: 34px;
 }
 
 .title {
-    font-size: 17.54px;
-    font-weight: 500;
-    line-height: 26.32px;
-    letter-spacing: -0.03em;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-
+  font-size: 17.54px;
+  font-weight: 500;
+  line-height: 26.32px;
+  letter-spacing: -0.03em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .author {
-    font-family: $font-family-primary;
-    font-size: 15.35px;
-    font-weight: 400;
-    line-height: 26.32px;
-    letter-spacing: -0.01em;
-    text-align: left;
-    text-decoration-skip-ink: none;
-    color: $primary-color-text;
-    font-weight: 400;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-
+  font-family: $font-family-primary;
+  font-size: 15.35px;
+  font-weight: 400;
+  line-height: 26.32px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  text-decoration-skip-ink: none;
+  color: $primary-color-text;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .public-domain {
-    margin-top: 17px;
-    font-family: $font-family-primary;
-    font-size: 15.35px;
-    font-weight: 700;
-    line-height: 26.32px;
-    letter-spacing: -0.01em;
-    text-align: left;
-    text-decoration-skip-ink: none;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-
-
+  margin-top: 17px;
+  font-family: $font-family-primary;
+  font-size: 15.35px;
+  font-weight: 700;
+  line-height: 26.32px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  text-decoration-skip-ink: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

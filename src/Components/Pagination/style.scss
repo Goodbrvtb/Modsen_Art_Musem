@@ -1,82 +1,80 @@
-@import "../../styles/fonts.scss";
+@import '../../styles/fonts.scss';
 
 .pagination-div {
-    padding: 24px 0 0 0;
-    display: flex;
-    width: 1280px;
-    justify-content: flex-end;
+  padding: 24px 0 0 0;
+  display: flex;
+  width: 1280px;
+  justify-content: flex-end;
 
-    @media screen and (max-device-width: 1280px) {
-        width: 100%;
-        justify-content: center;
-    }
-
+  @media screen and (max-device-width: 1280px) {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .pagination {
-    width: 182px;
-    height: 30px;
-    display: flex;
-    justify-content: flex-end;
-    column-gap: 6px;
+  width: 182px;
+  height: 30px;
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 6px;
 }
 
 .button-click-next {
-    display: flex;
-    width: 30px;
-    height: 30px;
-    column-gap: 20px;
-    border-radius: 4px;
-    justify-content: flex-end;
-
+  display: flex;
+  width: 30px;
+  height: 30px;
+  column-gap: 20px;
+  border-radius: 4px;
+  justify-content: flex-end;
 }
 
 .button-click-next:hover {
-    background: #cecaca;
+  background: #cecaca;
 }
 
 .button-click-prev {
-    display: flex;
-    width: 30px;
-    height: 30px;
-    border-radius: 4px;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
 }
 
 .button-click-prev:hover {
-    background: #cecaca;
+  background: #cecaca;
 }
 
 .img-click-prev {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .button-pagination {
-    display: flex;
-    width: 30px;
-    height: 30px;
-    border-radius: 4px;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3em;
-    font-family: $font-family-primary, sans-serif;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3em;
+  font-family: $font-family-primary, sans-serif;
 }
 
 .button-pagination-active {
-    display: flex;
-    width: 30px;
-    height: 30px;
-    border-radius: 4px;
-    align-items: center;
-    justify-content: center;
-    background: #F17900;
-    font-size: 1.3em;
-    font-family: $font-family-primary, sans-serif;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  background: #f17900;
+  font-size: 1.3em;
+  font-family: $font-family-primary, sans-serif;
 }
 
 .button-pagination:hover {
-    background: #cecaca;
+  background: #cecaca;
 }
 
 .button {
-    margin: 0;
+  margin: 0;
 }

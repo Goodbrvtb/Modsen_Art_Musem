@@ -1,15 +1,15 @@
 import { FC, ReactNode } from 'react';
+
 import './style.scss';
 
-interface HomeTitleProps { title: string | ReactNode }
+interface HomeTitleProps {
+  title: string | ReactNode;
+}
 
-export const Title: FC<HomeTitleProps> = ({title}) => {
+export const Title: FC<HomeTitleProps> = ({ title }) => {
   return (
     <div className="home-title">
-      <p>
-        {title}
-      </p>
+      <p>{title}</p>
     </div>
   );
 };
-
