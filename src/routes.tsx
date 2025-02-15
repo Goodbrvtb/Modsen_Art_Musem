@@ -1,14 +1,12 @@
-import { FavoritesPage } from "./Pages/favorites/favorites"
-import { HomePage } from "./Pages/homePage/homePage"
-import { DetailInfo } from "./Pages/detailInfo/detailInfo"
-import { NotFound } from "./Pages/notFound/notFound"
+import { DetailInfo } from './Pages/detailInfo/detailInfo';
+import { FavoritesPage } from './Pages/favorites/favorites';
+import { HomePage } from './Pages/homePage/homePage';
+import { NotFound } from './Pages/notFound/notFound';
 
-
-
-export const HOME_ROUTE = "/"
-export const FAVORITE_ROUTE = "/fav"
-export const DETAIL_INFO = "/detailInfo"
-export const NOT_FOUND = "/*"
+export const HOME_ROUTE = '/';
+export const FAVORITE_ROUTE = '/fav';
+export const DETAIL_INFO = '/detailInfo';
+export const NOT_FOUND = '/*';
 export const routes = [
   {
     path: HOME_ROUTE,
@@ -25,5 +23,5 @@ export const routes = [
   {
     path: NOT_FOUND,
     element: NotFound,
-  }
+  },
 ];

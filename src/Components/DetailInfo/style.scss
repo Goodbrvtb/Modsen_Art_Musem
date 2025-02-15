@@ -1,206 +1,180 @@
-@use "../../styles/colors.scss" as colors;
-@use "../../styles/fonts.scss" as fonts;
+@use '../../styles/colors.scss' as colors;
+@use '../../styles/fonts.scss' as fonts;
 
 .info-cart {
-    display: flex;
-    width: 100%;
-    max-width: 479px;
-    height: 570px;
-    justify-content: flex-start;
+  display: flex;
+  width: 100%;
+  max-width: 479px;
+  height: 570px;
+  justify-content: flex-start;
 }
 
 .image-cart {
-    margin-left: 202px;
-    display: flex;
-    width: 497px;
-    height: 570px;
-    background-position: center center;
-    background-size: cover;
-    justify-content: flex-end;
+  margin-left: 202px;
+  display: flex;
+  width: 497px;
+  height: 570px;
+  background-position: center center;
+  background-size: cover;
+  justify-content: flex-end;
 }
 
 .fav-cart {
-    display: flex;
-    padding-top: 120px;
-    align-items: center;
-    justify-content: flex-start;
-    width: auto;
-    gap: 80px;
-
+  display: flex;
+  padding-top: 120px;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  gap: 80px;
 }
 
 .title-detailInfo {
-    width: 100%;
-    max-width: 640px;
-    height: auto;
-    font-family: fonts.$font-family-primary;
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 40px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-
-
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  font-family: fonts.$font-family-primary;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
 }
 
 .author-detailInfo {
-    font-family: fonts.$font-family-primary;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 30px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: #e0a449ff
+  font-family: fonts.$font-family-primary;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #e0a449ff;
 }
 
 .years-detailInfo {
-    width: 100%;
-    max-width: 140px;
-    height: 19px;
-    padding: 10px;
-    font-family: fonts.$font-family-primary;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 20px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-
+  width: 100%;
+  max-width: 140px;
+  height: 19px;
+  padding: 10px;
+  font-family: fonts.$font-family-primary;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
 }
 
-
-
 .overview-div {
-    margin-top: 210px;
-    width: 100%;
-    max-width: 480px;
-    height: 231px;
-
-
+  margin-top: 210px;
+  width: 100%;
+  max-width: 480px;
+  height: 231px;
 }
 
 .overview {
-    width: 100%;
-    max-width: 401px;
-    height: 40px;
-    font-family: fonts.$font-family-primary;
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 40px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: colors.$color-text;
+  width: 100%;
+  max-width: 401px;
+  height: 40px;
+  font-family: fonts.$font-family-primary;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: colors.$color-text;
 }
 
 .text-info {
-    margin-top: 32px;
-    font-family: fonts.$font-family-primary;
-    font-size: 16px;
-    font-weight: 100%;
-    line-height: 20px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
+  margin-top: 32px;
+  font-family: fonts.$font-family-primary;
+  font-size: 16px;
+  font-weight: 100%;
+  line-height: 20px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .text-info span {
-    color: #e0a449ff;
-
+  color: #e0a449ff;
 }
 
 @media screen and (max-device-width: 1200px) {
+  .fav-cart {
+    flex-direction: column;
+  }
 
-    .fav-cart {
-        flex-direction: column;
-    }
+  .image-cart {
+    margin-left: 0px;
+  }
 
-    .image-cart {
-        margin-left: 0px;
-
-    }
-
-    .info-title {
-        display: flex;
-        flex-direction: column;
-        width: 400px;
-    }
+  .info-title {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+  }
 }
 
 @media screen and (max-device-width: 1490px) {
+  .fav-cart {
+    flex-direction: column;
+  }
 
-    .fav-cart {
-        flex-direction: column;
-    }
+  .image-cart {
+    margin-left: 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
-    .image-cart {
-
-
-
-        margin-left: 0px;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-    .overview-div {
-        margin-top: 20px;
-
-
-
-    }
+  .overview-div {
+    margin-top: 20px;
+  }
 }
 
-
 @media screen and (max-device-width: 768px) {
-    .fav-cart {
-        padding-top: 120px;
-        flex-direction: column;
-    }
+  .fav-cart {
+    padding-top: 120px;
+    flex-direction: column;
+  }
 
-    .image-cart {
-        display: flex;
+  .image-cart {
+    display: flex;
 
-        max-width: 340px;
-        max-height: 400px;
-        margin-left: 0px;
-        background-size: cover;
-        background-repeat: no-repeat;
+    max-width: 340px;
+    max-height: 400px;
+    margin-left: 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
-    }
+  .info-cart {
+    display: flex;
+    width: 90%;
+    max-width: 497px;
+    height: 570px;
+    justify-content: flex-start;
+    font-size: clamp(1rem, calc(2vw + 1rem), 3rem);
+  }
 
-    .info-cart {
-        display: flex;
-        width: 90%;
-        max-width: 497px;
-        height: 570px;
-        justify-content: flex-start;
-        font-size: clamp(1rem, calc(2vw + 1rem), 3rem);
-    }
+  .title-detailInfo {
+    display: flex;
+    width: 90%;
+    max-width: 640px;
+    height: auto;
+    // height: 80px;
+  }
 
-    .title-detailInfo {
-        display: flex;
-        width: 90%;
-        max-width: 640px;
-        height: auto;
-        // height: 80px;
+  .info-title {
+    width: auto;
+  }
 
-
-
-    }
-
-    .info-title {
-
-        width: auto;
-    }
-
-    .overview-div {
-        margin-top: 20px;
-    }
-
+  .overview-div {
+    margin-top: 20px;
+  }
 }

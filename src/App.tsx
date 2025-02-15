@@ -1,9 +1,10 @@
-import './styles/globals.scss'
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import './App.scss'
-import { routes } from "./routes";
-export function App() {
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
+import './App.scss';
+import { routes } from './routes';
+import './styles/globals.scss';
+
+export function App() {
   const routeComponents = routes.map(({ path, element }, key) => (
     <Route path={path} Component={element} key={key} />
   ));
@@ -12,5 +13,5 @@ export function App() {
     <BrowserRouter>
       <Routes>{routeComponents}</Routes>
     </BrowserRouter>
-  )
+  );
 }

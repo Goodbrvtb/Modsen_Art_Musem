@@ -1,27 +1,26 @@
-@import "../../styles/colors.scss";
-@import "../../styles/fonts.scss";
+@import '../../styles/colors.scss';
+@import '../../styles/fonts.scss';
 
 .body-title-other {
-    font-family: $font-family-primary;
-    margin: 100px 0 40px 0;
-    font-size: 64px;
-    text-align: center;
-    font-weight: 700;
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 40px;
+  font-family: $font-family-primary;
+  margin: 100px 0 40px 0;
+  font-size: 64px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40px;
 }
 
 .body-title-other p {
-    color: $color-text;
-    margin: 0;
+  color: $color-text;
+  margin: 0;
 }
 
 .body-title-other p span {
-    text-align: center;
-    color: $primary-color-text;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 20px;
-
+  text-align: center;
+  color: $primary-color-text;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
 }

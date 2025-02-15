@@ -1,7 +1,9 @@
 import React from 'react';
+
+import LogoMod from '@assets/icons/logo-modsen.svg';
+import LogoFt from '@assets/icons/museum-logo-2.svg';
+
 import './style.scss';
-import LogoFt from "@assets/icons/museum-logo-2.svg"
-import LogoMod from "@assets/icons/logo-modsen.svg"
 
 export const Footer: React.FC = () => {
   return (
@@ -10,12 +12,10 @@ export const Footer: React.FC = () => {
         <div className="logo-Footer">
           <img src={LogoFt} alt=""></img>
         </div>
-        <div className='logo-Moodsen'>
+        <div className="logo-Moodsen">
           <img src={LogoMod} alt=""></img>
         </div>
       </div>
     </footer>
   );
-}
-
-
+};
