@@ -1,9 +1,17 @@
 import { FC } from 'react';
 
-import { OtherGalleryProps } from '@utils/types';
+import { checkFavorites } from '@utils/checkFavorites';
 
+import { ArtWorkFullInfo } from '../../utils/types';
 import { ArtWorkInfoCardOther } from '../ArtWorkInfoCartSmall';
 import './style.scss';
+
+export interface OtherGalleryProps {
+  isSelected: void;
+  otherArtWorks: any[];
+  favoritesIds: ArtWorkFullInfo[];
+  handleFavoritesChange: (artwork: ArtWorkFullInfo) => void;
+}
 
 export const OtherGallery: FC<OtherGalleryProps> = ({
   favoritesIds,
@@ -16,7 +24,7 @@ export const OtherGallery: FC<OtherGalleryProps> = ({
         {otherArtWorks.map((artWork) => (
           <ArtWorkInfoCardOther
             artWork={artWork}
-            isSelected={favoritesIds.some((item) => item.id === artWork.id)}
+            isSelected={checkFavorites(favoritesIds, artWork)}
             handleFavoritesChange={handleFavoritesChange}
           />
         ))}

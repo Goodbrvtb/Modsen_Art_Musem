@@ -1,7 +1,9 @@
+@import '../../styles';
+
 .custom-skeleton {
   width: 387px;
   height: 444px;
-  background-color: #403f3f;
+  background-color: $background-color-skeleton;
   border-radius: 8px;
   margin: 10px;
   animation: pulse 1.5s infinite;

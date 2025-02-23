@@ -1,28 +1,30 @@
-.select {
+@import '../../../styles/';
+
+.select-field {
   display: flex;
   padding-left: 16px;
-  font-family: 'InterRegular';
+  font-family: $font-family-minor;
   font-size: 14px;
   font-weight: 400;
   line-height: 16.94px;
   border-radius: 4px;
-  background-color: #3939390c;
+  background-color: $background-color;
   width: 190px;
   height: 46px;
 }
 
-.select::-ms-expand {
+.select-field::-ms-expand {
   display: none;
 }
 
-.select:hover {
-  border-color: #888;
+.select-field:hover {
+  border-color: $color-background-pagination;
 }
 
-.select:focus {
-  border-color: #aaa;
-  box-shadow: 0 0 1px 3px #888;
-  color: #222;
+.select-field:focus {
+  border-color: $border-color-select;
+  box-shadow: 0 0 1px 3px $color-background-pagination;
+  color: $background-color-skeleton;
   outline: none;
 }
 
@@ -30,8 +32,8 @@
   font-weight: normal;
 }
 
-.select-div {
-  padding: 24px 0 0 0;
+.container {
+  padding: 24px 0 0 0; // пересмотреть отступы и проверить
   display: flex;
   width: 1280px;
   justify-content: flex-end;

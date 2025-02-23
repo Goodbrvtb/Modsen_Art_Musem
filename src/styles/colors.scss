@@ -1,5 +1,25 @@
+// Background Colors
+$background-color-skeleton: #403f3f;
+$background-color: #3939390c;
+$color-background-pagination: #cecaca;
+
+// Color Palette
 $color-white: #ffffff;
+$color-black: #000000;
 $primary-color-text: #f17900ff;
-$color-fav-button: #fbd7b24c;
 $color-text: #393939ff;
 $color-text-error: #ff0000;
+
+// Border Colors
+$border-color-select: #aaa;
+
+// Button Colors
+$color-fav-button: #fbd7b24c;
+
+// Gradients
+$gradient-gray: linear-gradient(
+  90deg,
+  #343333ff 17%,
+  #484848ff 59%,
+  #282828ff 99%
+);

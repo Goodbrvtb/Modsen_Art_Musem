@@ -2,28 +2,19 @@ import { Dispatch, FC, SetStateAction, useState } from 'react';
 
 import { sortDataByType } from '@utils/sortUtil';
 
+import { ArtWork, SortType } from '@/utils/types';
+
 import { SelectField } from './SelectField';
 
 interface SortComponentProps {
-  data: {
-    id: number;
-    title: string;
-    imageUrl: string;
-    artist_display: string;
-    is_public_domain: boolean;
-    artist_title: string;
-    date_end: number;
-  }[];
+  data: ArtWork[];
   setData: Dispatch<SetStateAction<any[]>>;
 }
 
 export const SortComponent: FC<SortComponentProps> = ({ data, setData }) => {
-  const [sortType, setSortType] = useState<
-    'asc' | 'desc' | 'oldToNew' | 'newToOld' | ''
-  >('');
-  const handleSort = (
-    sortType: 'asc' | 'desc' | 'oldToNew' | 'newToOld' | '',
-  ) => {
+  const [sortType, setSortType] = useState<SortType>('default');
+
+  const handleSort = (sortType: SortType) => {
     const sortedData = sortDataByType({ data, type: sortType });
     setData(sortedData);
     setSortType(sortType);
@@ -31,7 +22,9 @@ export const SortComponent: FC<SortComponentProps> = ({ data, setData }) => {
   return (
     <>
       {data.length ? (
-        <SelectField handleSort={handleSort} sortType={sortType}></SelectField>
+        <SelectField
+          handleSort={handleSort}
+          currentSort={sortType}></SelectField>
       ) : null}
     </>
   );

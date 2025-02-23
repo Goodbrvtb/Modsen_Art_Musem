@@ -5,7 +5,9 @@ import { Header } from '@components/Header';
 import { SectionTitle } from '@components/SectionTitle';
 import { Title } from '@components/Title';
 
+import { checkFavorites } from '@/utils/checkFavorites';
 import { useHandleFavIdChange } from '@/utils/hooks/useHandleFavIdChange';
+import { ArtWork } from '@/utils/types';
 
 export function FavoritesPage() {
   const { favoritesIds, handleFavoritesChange } = useHandleFavIdChange();
@@ -37,10 +39,7 @@ export function FavoritesPage() {
             }
           />
         ) : (
-          <></>
-        )}
-        <div className="other-gallery">
-          {!lengthFavoritesIds && (
+          <div className="other-gallery">
             <Title
               title={
                 <>
@@ -49,35 +48,19 @@ export function FavoritesPage() {
                 </>
               }
             />
-          )}
-          {favoritesIds.map(
-            (artWork: {
-              id: number;
-              title: string;
-              imageUrl: string;
-              artist_display: string;
-              is_public_domain: boolean;
-              artist_title: string;
-            }) => (
-              <ArtWorkInfoCardOther
-                artWork={artWork}
-                handleFavoritesChange={handleFavoritesChange}
-                isSelected={favoritesIds.some(
-                  (item: {
-                    id: number;
-                    title: string;
-                    imageUrl: string;
-                    artist_display: string;
-                    is_public_domain: boolean;
-                    artist_title: string;
-                  }) => item.id === artWork.id,
-                )}
-              />
-            ),
-          )}
+          </div>
+        )}
+        <div className="other-gallery">
+          {favoritesIds.map((artWork) => (
+            <ArtWorkInfoCardOther
+              artWork={artWork}
+              handleFavoritesChange={handleFavoritesChange}
+              isSelected={checkFavorites(favoritesIds, artWork)}
+            />
+          ))}
         </div>
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }

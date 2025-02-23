@@ -1,27 +1,29 @@
 import { ChangeEvent, FC } from 'react';
 
+import { SortType } from '@/utils/types';
+
 import '../SelectField/style.scss';
 
 interface SelectFieldProps {
-  handleSort: (sortType: 'asc' | 'desc' | 'oldToNew' | 'newToOld' | '') => void;
-  sortType: 'asc' | 'desc' | 'oldToNew' | 'newToOld' | '';
+  handleSort: (sortType: SortType) => void;
+  currentSort: SortType;
 }
 
-export const SelectField: FC<SelectFieldProps> = ({ handleSort, sortType }) => {
+export const SelectField: FC<SelectFieldProps> = ({
+  handleSort,
+  currentSort,
+}) => {
   const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
-    handleSort(
-      event.target.value as 'asc' | 'desc' | 'oldToNew' | 'newToOld' | '',
-    );
+    handleSort(event.target.value as SortType);
   };
 
   return (
-    <div className="select-div">
+    <div className="container">
       <select
-        className="select"
-        title="select"
-        value={sortType}
+        className="select-field"
+        value={currentSort}
         onChange={handleChange}>
-        <option value="">Select sort type</option>
+        <option value="default">Select sort type</option>
         <option value="asc">Title ascending</option>
         <option value="desc">Title descending</option>
         <option value="oldToNew">Old to new</option>

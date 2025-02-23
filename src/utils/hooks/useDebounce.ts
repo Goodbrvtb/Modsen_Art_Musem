@@ -1,12 +1,14 @@
 import { useEffect, useRef } from 'react';
 
-type Timer = ReturnType<typeof setTimeout>;
-type SomeFunction = (...args: any[]) => void;
+import { SomeFunction, Timer } from '@/utils/types';
 
-export function useDebounce(func: SomeFunction, delay: number) {
-  const timeoutCurrent = useRef<Timer>(); //хук для создания объкта timeoutCurrent
+export function useDebounce<T extends any[]>(
+  func: SomeFunction,
+  delay: number,
+): (...args: T) => void {
+  const timeoutCurrent = useRef<Timer | undefined>(undefined);
+
   useEffect(() => {
-    //используется для очистки и установления нового тайм аута после ввода данных
     return () => {
       if (timeoutCurrent.current) {
         clearTimeout(timeoutCurrent.current);
@@ -14,12 +16,14 @@ export function useDebounce(func: SomeFunction, delay: number) {
     };
   }, []);
 
-  const debounceFunction = (...args: any[]) => {
-    const timeoutNewId = setTimeout(() => {
+  const debounceFunction = (...args: T): void => {
+    if (timeoutCurrent.current) {
+      clearTimeout(timeoutCurrent.current);
+    }
+
+    timeoutCurrent.current = setTimeout(() => {
       func(...args);
     }, delay);
-    clearTimeout(timeoutCurrent.current);
-    timeoutCurrent.current = timeoutNewId;
   };
 
   return debounceFunction;

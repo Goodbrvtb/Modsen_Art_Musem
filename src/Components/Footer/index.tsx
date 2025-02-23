@@ -10,10 +10,10 @@ export const Footer: React.FC = () => {
     <footer className="footer">
       <div className="footer-Bar">
         <div className="logo-Footer">
-          <img src={LogoFt} alt=""></img>
+          <img src={LogoFt} alt="logo-Footer"></img>
         </div>
-        <div className="logo-Moodsen">
-          <img src={LogoMod} alt=""></img>
+        <div className="logo-Modsen">
+          <img src={LogoMod} alt="logo-Modsen"></img>
         </div>
       </div>
     </footer>

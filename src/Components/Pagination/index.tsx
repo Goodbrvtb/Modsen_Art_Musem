@@ -1,14 +1,11 @@
 import { FC } from 'react';
 
 import shapeNext from '@assets/icons/shape-next.svg';
+import { getPaginationNumbers } from '@utils/getPaginationNumbers';
+
+import { PaginationProps } from '@/utils/types';
 
 import './style.scss';
-
-interface PaginationProps {
-  currentPage: number;
-  lastPage: number;
-  setCurrentPage: (pageNumber: number) => void;
-}
 
 export const Pagination: FC<PaginationProps> = ({
   currentPage,
@@ -25,19 +22,6 @@ export const Pagination: FC<PaginationProps> = ({
   const handleClickPage = (newPage: number) => {
     setCurrentPage(newPage);
   };
-  const getPaginationNumbers = () => {
-    let start = Math.max(currentPage - Math.floor(4 / 2), 1);
-    const end = Math.min(start + 4 - 1, lastPage);
-
-    if (end - start + 1 < 4) {
-      start = Math.max(end - 4 + 1, 1);
-    }
-    const pages = [];
-    for (let i = start; i <= end; i++) {
-      pages.push(i);
-    }
-    return pages;
-  };
 
   return (
     <>
@@ -48,11 +32,18 @@ export const Pagination: FC<PaginationProps> = ({
               title="prev-button"
               className="button-click-prev"
               onClick={handleClickPrev}>
-              <img className="img-click-prev" src={shapeNext} alt=""></img>
+              <img
+                className="img-click-prev"
+                src={shapeNext}
+                alt="click-prev"></img>
             </button>
           )}
           <div className="pagination">
-            {getPaginationNumbers().map((pageNumber) => {
+            {getPaginationNumbers({
+              currentPage,
+              setCurrentPage,
+              lastPage,
+            }).map((pageNumber) => {
               return (
                 <button
                   className={`button-pagination${currentPage == pageNumber ? '-active' : ''}`}
@@ -66,7 +57,10 @@ export const Pagination: FC<PaginationProps> = ({
               className="button-click-next"
               title="next-button"
               onClick={handleClickNext}>
-              <img className="img-click-next" src={shapeNext} alt=""></img>
+              <img
+                className="img-click-next"
+                src={shapeNext}
+                alt="click-next"></img>
             </button>
           </div>
         </div>

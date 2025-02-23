@@ -27,6 +27,8 @@ export function HomePage() {
   const { otherArtWorks } = useGetOtherArtWorks();
   const { favoritesIds, handleFavoritesChange } = useHandleFavIdChange();
 
+  console.log(artWorksList, 'tetst');
+
   return (
     <div className="wrapper">
       <div className="content">
@@ -56,6 +58,7 @@ export function HomePage() {
           otherArtWorks={otherArtWorks}
           favoritesIds={favoritesIds}
           handleFavoritesChange={handleFavoritesChange}
+          isSelected={undefined}
         />
         <Footer />
       </div>

@@ -2,22 +2,30 @@ import { useEffect, useState } from 'react';
 
 import { IMAGE_ENDPOINT } from '../../constants/api';
 import { getArtWorksByIdApiAxios } from '../apiApp';
-import { UseArtWorkApiAxiosProps } from '../types';
+import { ArtWorkFullInfo, UseArtWorkApiAxiosProps } from '../types';
 
-export const useArtWorkApiAxios = ({ id }: UseArtWorkApiAxiosProps) => {
-  const [info, setInfo] = useState<any>();
+//указать тип возвращаемого значения функции
+export const useArtWorkApiAxios = ({
+  id,
+}: UseArtWorkApiAxiosProps): ArtWorkFullInfo | undefined => {
+  //убрать any указать нормальный тип
+  const [info, setInfo] = useState<ArtWorkFullInfo>();
+
   useEffect(() => {
     async function getInfo(id: number) {
-      const info = await getArtWorksByIdApiAxios(id);
+      const artWork = await getArtWorksByIdApiAxios(id);
+
       const fullInfo = {
-        ...info,
-        imageUrl: IMAGE_ENDPOINT(info.data.image_id),
+        ...artWork,
+        imageUrl: IMAGE_ENDPOINT(artWork.image_id),
       };
 
       setInfo(fullInfo);
+      console.log(fullInfo);
     }
+
     void getInfo(id);
   }, [id]);
-
-  return { info };
+  console.log(info);
+  return info;
 };

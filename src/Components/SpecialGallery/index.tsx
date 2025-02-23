@@ -1,27 +1,16 @@
 import { FC } from 'react';
 
+import { checkFavorites } from '@/utils/checkFavorites';
+import { ArtWork, ArtWorkFullInfo } from '@/utils/types';
+
 import { ArtWorkInfoCard } from '../ArtWorkInfoCard';
 import { SectionTitle } from '../SectionTitle/index';
 import './style.scss';
 
 interface SpecialGalleryProps {
-  artWorks: any[];
-  favoritesIds: {
-    id: number;
-    title: string;
-    imageUrl: string;
-    artist_display: string;
-    is_public_domain: boolean;
-    artist_title: string;
-  }[];
-  handleFavoritesChange: (artwork: {
-    id: number;
-    title: string;
-    imageUrl: string;
-    artist_display: string;
-    is_public_domain: boolean;
-    artist_title: string;
-  }) => void;
+  artWorks: ArtWorkFullInfo[];
+  favoritesIds: ArtWorkFullInfo[];
+  handleFavoritesChange: (artwork: ArtWorkFullInfo) => void;
 }
 
 export const SpecialGallery: FC<SpecialGalleryProps> = ({
@@ -45,7 +34,7 @@ export const SpecialGallery: FC<SpecialGalleryProps> = ({
             <ArtWorkInfoCard
               artWork={artWork}
               handleFavoritesChange={handleFavoritesChange}
-              isSelected={favoritesIds.some((item) => item.id === artWork.id)}
+              isSelected={checkFavorites(favoritesIds, artWork)}
             />
           ))}
         </div>

@@ -1,14 +1,8 @@
+import { ArtWork, SortType } from './types';
+
 interface sortDataByTypeProps {
-  data: {
-    id: number;
-    title: string;
-    imageUrl: string;
-    artist_display: string;
-    is_public_domain: boolean;
-    artist_title: string;
-    date_end: number;
-  }[];
-  type: 'asc' | 'desc' | 'oldToNew' | 'newToOld' | '';
+  data: ArtWork[];
+  type: SortType;
 }
 
 export const sortDataByType = ({ data, type }: sortDataByTypeProps) => {

@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react';
+import { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import fallBackSrc from '@assets/images/image-default.svg';
@@ -7,27 +7,15 @@ import { CustomSkeleton } from '@components/Skeleton/index';
 import { useImageFallback } from '@utils/hooks/useImageFallback';
 import { useSkeleton } from '@utils/hooks/useSkeleton';
 
+import { ArtWorkFullInfo } from '@/utils/types';
+
 import { DETAIL_INFO } from '../../routes';
 import './style.scss';
 
 interface ArtWorkInfoCardProps {
-  artWork: {
-    id: number;
-    title: string;
-    imageUrl: string;
-    artist_display: string;
-    is_public_domain: boolean;
-    artist_title: string;
-  };
+  artWork: ArtWorkFullInfo;
   isSelected: boolean;
-  handleFavoritesChange: (artwork: {
-    id: number;
-    title: string;
-    imageUrl: string;
-    artist_display: string;
-    is_public_domain: boolean;
-    artist_title: string;
-  }) => void | ReactNode;
+  handleFavoritesChange: (artwork: ArtWorkFullInfo) => void;
   className?: string;
 }
 
@@ -40,18 +28,13 @@ export const ArtWorkInfoCard: FC<ArtWorkInfoCardProps> = ({
   const { imgSrc } = useImageFallback(artWork.imageUrl, fallBackSrc);
   const loadingImg = useSkeleton(artWork.imageUrl);
   const navigate = useNavigate();
+
   const handleCardClick = () => {
     navigate(`${DETAIL_INFO}/${artWork.id}`);
   };
-
   const handleFavClick = () => {
     handleFavoritesChange(artWork);
-    console.log(artWork.id, 'artWorkID');
   };
-
-  console.log(imgSrc, 'imgSrc');
-  console.log(loadingImg, 'loading');
-
   return (
     <div>
       {loadingImg ? (
