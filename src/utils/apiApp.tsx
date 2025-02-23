@@ -1,63 +1,61 @@
 import axios from 'axios';
 
+import { ArtWork, SearchArtWorkType } from '@/utils/types';
+
 import {
   ARTWORKS_BY_ID_ENDPOINT,
   ARTWORKS_ENDPOINT,
+  DEFAULT_OTHER_LIMIT,
+  DEFAULT_SEARCH_LIMIT,
+  FIELDS_OPTIONS,
   SEARCH_ENDPOINT,
 } from '../constants/api';
-import { ArtWorkType, SearchArtWorkType } from '../utils/types';
 
 export const searchArtWorksApiAxios = async (
   inputData: string,
   currentPage: number,
 ): Promise<SearchArtWorkType> => {
-  // Делаем запрос пользователя с данным ID
-  const resultAxios = await axios
+  const { data } = await axios
     .get(SEARCH_ENDPOINT(inputData), {
       params: {
-        limit: 3,
+        limit: DEFAULT_SEARCH_LIMIT,
         page: currentPage,
       },
     })
     .then(function (data) {
-      // обработка успешного запроса
-
       return data;
     });
-  return resultAxios.data;
+
+  return { data: data.data, pagination: data.pagination };
 };
 
 export const getArtWorksByIdApiAxios = async (
   artWorkId: number,
-): Promise<ArtWorkType> => {
-  // Делаем запрос пользователя с данным ID
-  const resultAxios = await axios
+): Promise<ArtWork> => {
+  const { data } = await axios
     .get(ARTWORKS_BY_ID_ENDPOINT(artWorkId), {
       params: {
-        fields:
-          'image_id,id,title,artist_display,artist_title,is_public_domain,place_of_origin,dimensions,credit_line,is_on_view,gallery_title,date_start,date_end',
+        fields: FIELDS_OPTIONS,
       },
     })
     .then(function (data) {
-      // обработка успешного запроса
-      return data;
+      return data.data;
     });
-  return resultAxios.data;
+
+  return data;
 };
 
 export const getOtherArtWorksApiAxios =
   async (): Promise<SearchArtWorkType> => {
-    // Делаем запрос пользователя с данным ID
-    const resultAxios = await axios
+    const { data } = await axios
       .get(ARTWORKS_ENDPOINT, {
         params: {
-          limit: 9,
+          limit: DEFAULT_OTHER_LIMIT,
         },
       })
       .then(function (data) {
-        // обработка успешного запроса
-
         return data;
       });
-    return resultAxios.data;
+
+    return { data: data.data, pagination: data.pagination };
   };

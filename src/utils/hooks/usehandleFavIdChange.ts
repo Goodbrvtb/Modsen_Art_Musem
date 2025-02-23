@@ -1,18 +1,14 @@
 import { useEffect, useState } from 'react';
 
 import { FAVORITES_KEY } from '../../constants/api';
+import { ArtWorkFullInfo } from '../types';
 
+//указать тип возвращаемого значения функции
+//указать тип ArtWork
 export const useHandleFavIdChange = () => {
-  const [favoritesIds, setFavoritesIds] = useState<any>([]);
+  const [favoritesIds, setFavoritesIds] = useState<ArtWorkFullInfo[]>([]);
 
-  function handleFavoritesChange(artWork: {
-    id: number;
-    title: string;
-    imageUrl: string;
-    artist_display: string;
-    is_public_domain: boolean;
-    artist_title: string;
-  }) {
+  function handleFavoritesChange(artWork: ArtWorkFullInfo) {
     const favoritesIdsCurrent = [...favoritesIds];
     const filteredFavoritesIds = favoritesIdsCurrent.filter(
       (item) => item.id !== artWork.id,
@@ -21,20 +17,9 @@ export const useHandleFavIdChange = () => {
       favoritesIdsCurrent.length == 0 ||
       favoritesIdsCurrent.length == filteredFavoritesIds.length
     ) {
-      setFavoritesIds(
-        (
-          prev: {
-            id: number;
-            title: string;
-            imageUrl: string;
-            artist_display: string;
-            is_public_domain: boolean;
-            artist_title: string;
-          }[],
-        ) => {
-          return [...prev, artWork];
-        },
-      );
+      setFavoritesIds((prev) => {
+        return [...prev, artWork];
+      });
       filteredFavoritesIds.push(artWork);
     } else {
       setFavoritesIds(filteredFavoritesIds);

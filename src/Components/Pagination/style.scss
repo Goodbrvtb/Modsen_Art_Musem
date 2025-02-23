@@ -1,4 +1,4 @@
-@import '../../styles/fonts.scss';
+@import '../../styles';
 
 .pagination-div {
   padding: 24px 0 0 0;
@@ -30,7 +30,7 @@
 }
 
 .button-click-next:hover {
-  background: #cecaca;
+  background: $color-background-pagination;
 }
 
 .button-click-prev {
@@ -41,7 +41,7 @@
 }
 
 .button-click-prev:hover {
-  background: #cecaca;
+  background: $color-background-pagination;
 }
 
 .img-click-prev {
@@ -66,13 +66,13 @@
   border-radius: 4px;
   align-items: center;
   justify-content: center;
-  background: #f17900;
+  background: $primary-color-text;
   font-size: 1.3em;
   font-family: $font-family-primary, sans-serif;
 }
 
 .button-pagination:hover {
-  background: #cecaca;
+  background: $color-background-pagination;
 }
 
 .button {

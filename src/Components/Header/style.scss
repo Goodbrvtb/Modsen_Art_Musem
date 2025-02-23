@@ -1,3 +1,5 @@
+@import '../../styles';
+
 .header {
   padding: 0;
   width: 100%;
@@ -6,12 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(
-    90deg,
-    #343333ff 17%,
-    #484848ff 59%,
-    #282828ff 99%
-  );
+  background: $gradient-gray;
 }
 
 .top-bar {
@@ -41,8 +38,8 @@
 .favorites {
   display: flex;
   align-items: center;
-  font-family: 'InterRegular';
-  color: #ffffffff;
+  font-family: $font-family-minor;
+  color: $color-white;
   font-size: 18px;
   font-weight: 400;
   line-height: 21.78px;
@@ -52,8 +49,8 @@
 .home {
   display: flex;
   align-items: center;
-  font-family: 'InterRegular';
-  color: #ffffffff;
+  font-family: $font-family-minor;
+  color: $color-white;
   font-size: 18px;
   font-weight: 400;
   line-height: 21.78px;
@@ -74,7 +71,7 @@
 }
 
 .a {
-  color: #ffffffff !important;
+  color: $color-white !important;
   text-decoration: none;
 }
 
@@ -107,16 +104,11 @@ button {
     flex-direction: column;
     width: 220px;
     height: 100%;
-    background: linear-gradient(
-      90deg,
-      #343333ff 17%,
-      #484848ff 59%,
-      #282828ff 99%
-    );
-    border: 2px solid black;
+    background: $gradient-gray;
+    border: 2px solid $color-black;
     border-top-right-radius: 16px;
     border-bottom-right-radius: 16px;
-    box-shadow: 0 0 4px 4px black;
+    box-shadow: 0 0 4px 4px $color-black;
     transition: transform 0.3s linear;
   }
 

@@ -5,25 +5,23 @@ import { Footer } from '@components/Footer/index';
 import { Header } from '@components/Header';
 import { useHandleFavIdChange } from '@utils/hooks/useHandleFavIdChange';
 
+import { checkFavoritesDetailInfo } from '@/utils/checkFavoritesDetailInfo';
+
 export function DetailInfo() {
   const { favoritesIds, handleFavoritesChange } = useHandleFavIdChange();
-  const { id } = useParams();
+  const { id } = useParams<{ id: string }>();
+
+  if (!id) {
+    return <div>Error: Artwork ID not specified</div>;
+  }
+
   return (
     <div>
       <Header />
       <DetailCart
         favoritesIds={favoritesIds}
         handleFavoritesChange={handleFavoritesChange}
-        isSelected={favoritesIds.some(
-          (item: {
-            id: number;
-            title: string;
-            imageUrl: string;
-            artist_display: string;
-            is_public_domain: boolean;
-            artist_title: string;
-          }) => item.id === Number(id),
-        )}
+        isSelected={checkFavoritesDetailInfo(favoritesIds, id)}
       />
       <Footer />
     </div>

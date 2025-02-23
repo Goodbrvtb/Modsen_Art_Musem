@@ -6,28 +6,16 @@ import { FavoritesIcon } from '@components/FavoritesIcon';
 import { useImageFallback } from '@utils/hooks/useImageFallback';
 import { useSkeleton } from '@utils/hooks/useSkeleton';
 
+import { ArtWorkFullInfo } from '@/utils/types';
+
 import { DETAIL_INFO } from '../../routes';
 import { CustomSkeleton } from '../Skeleton';
 import './style.scss';
 
 interface ArtWorkInfoCardOtherProps {
-  artWork: {
-    id: number;
-    title: string;
-    imageUrl: string;
-    artist_display: string;
-    is_public_domain: boolean;
-    artist_title: string;
-  };
+  artWork: ArtWorkFullInfo;
   isSelected: boolean;
-  handleFavoritesChange: (artwork: {
-    id: number;
-    title: string;
-    imageUrl: string;
-    artist_display: string;
-    is_public_domain: boolean;
-    artist_title: string;
-  }) => void;
+  handleFavoritesChange: (artwork: ArtWorkFullInfo) => void;
 }
 
 export const ArtWorkInfoCardOther: FC<ArtWorkInfoCardOtherProps> = ({
@@ -38,12 +26,12 @@ export const ArtWorkInfoCardOther: FC<ArtWorkInfoCardOtherProps> = ({
   const navigate = useNavigate();
   const { imgSrc } = useImageFallback(artWork.imageUrl, DefaultImage);
   const loadingImg = useSkeleton(artWork.imageUrl);
+
   const handleCardClick = () => {
     navigate(`${DETAIL_INFO}/${artWork.id}`);
   };
   const handleFavClick = () => {
     handleFavoritesChange(artWork);
-    console.log(DefaultImage, 'artWorkID');
   };
 
   return (

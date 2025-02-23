@@ -1,22 +1,45 @@
 @import '../../styles';
 
 .search-bar-error {
+  display: flex;
+  align-items: center;
   color: $color-text-error;
   padding-left: 16px;
   font-family: $font-family-primary;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 16.94px;
-  padding: 10px;
+  padding-top: 80px;
+  position: absolute;
+
+  @media screen and (max-width: 768px) {
+    .search-bar-error {
+      font-size: 3vw;
+      width: 100%;
+      left: 0;
+      right: 0;
+    }
+  }
 }
 
+.search-bar-error.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.search-bar-center {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+}
 .search-bar {
   display: flex;
   align-items: center;
-  width: 39%;
   height: 64px;
   border-radius: 16px;
-  background-color: #3939390c;
+  background-color: #3939390c; //вынести
+  width: 39%;
 
   @media screen and (max-device-width: 1280px) {
     width: unset;
@@ -30,7 +53,7 @@
   flex: 1;
   border-radius: 16px 0 0 16px;
   padding-left: 16px;
-  font-family: 'InterRegular';
+  font-family: 'InterRegular'; //вынести
   font-size: 14px;
   font-weight: 400;
   line-height: 16.94px;

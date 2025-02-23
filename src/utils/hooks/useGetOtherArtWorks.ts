@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import { IMAGE_ENDPOINT } from '../../constants/api';
 import { getArtWorksByIdApiAxios, getOtherArtWorksApiAxios } from '../apiApp';
 
+//указать тип возвращаемого значения функции
+//убрать any указать нормальный тип
 export const useGetOtherArtWorks = () => {
   const [data, setData] = useState<any>([]);
 
@@ -11,18 +13,18 @@ export const useGetOtherArtWorks = () => {
       const artWorks = await getOtherArtWorksApiAxios();
       const artWorkFullInfo = await Promise.all(
         artWorks.data.map(async ({ id }) => {
-          const { data } = await getArtWorksByIdApiAxios(id);
+          const artWork = await getArtWorksByIdApiAxios(id);
 
           return {
-            ...data,
-            imageUrl: IMAGE_ENDPOINT(data.image_id),
+            ...artWork,
+            imageUrl: IMAGE_ENDPOINT(artWork.image_id),
           };
         }),
       );
       setData(artWorkFullInfo);
     }
 
-    void getArtWorks(); // зачем void?? вызов функции но без вывода значения
+    void getArtWorks();
   }, []);
 
   return { otherArtWorks: data };
