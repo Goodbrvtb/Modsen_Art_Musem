@@ -3,9 +3,9 @@ import { useParams } from 'react-router-dom';
 import { DetailCart } from '@components/DetailInfo';
 import { Footer } from '@components/Footer/index';
 import { Header } from '@components/Header';
-import { useHandleFavIdChange } from '@utils/hooks/useHandleFavIdChange';
 
 import { checkFavoritesDetailInfo } from '@/utils/checkFavoritesDetailInfo';
+import { useHandleFavIdChange } from '@/utils/hooks/useHandleFavIdChange';
 
 export function DetailInfo() {
   const { favoritesIds, handleFavoritesChange } = useHandleFavIdChange();

@@ -3,8 +3,6 @@ import { useEffect, useState } from 'react';
 import { FAVORITES_KEY } from '../../constants/api';
 import { ArtWorkFullInfo } from '../types';
 
-//указать тип возвращаемого значения функции
-//указать тип ArtWork
 export const useHandleFavIdChange = () => {
   const [favoritesIds, setFavoritesIds] = useState<ArtWorkFullInfo[]>([]);
 
