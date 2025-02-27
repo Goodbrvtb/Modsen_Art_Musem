@@ -1,6 +1,6 @@
 import { Dispatch, FC, SetStateAction, useState } from 'react';
 
-import { sortDataByType } from '@utils/sortUtil';
+import { sortDataByType } from '@utils/sortDataByType';
 
 import { ArtWork, SortType } from '@/utils/types';
 
