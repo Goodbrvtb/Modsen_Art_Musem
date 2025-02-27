@@ -1,4 +1,4 @@
-import { sortDataByType } from '../src/utils/sortUtil';
+import { sortDataByType } from '../src/utils/sortDataByType';
 import { ArtWork } from '../src/utils/types';
 
 describe('sortDataByType', () => {
