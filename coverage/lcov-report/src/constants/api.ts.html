@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">91.66% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/12</span>
+                <span class='fraction'>11/12</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">66.66% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>2/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">91.66% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/12</span>
+                <span class='fraction'>11/12</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -84,48 +84,48 @@
 <a name='L19'></a><a href='#L19'>19</a>
 <a name='L20'></a><a href='#L20'>20</a>
 <a name='L21'></a><a href='#L21'>21</a>
-<a name='L22'></a><a href='#L22'>22</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L22'></a><a href='#L22'>22</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export const ARTWORKS_ENDPOINT = <span class="cstat-no" title="statement not covered" >'https://api.artic.edu/api/v1/artworks';</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export const ARTWORKS_ENDPOINT = 'https://api.artic.edu/api/v1/artworks';
 &nbsp;
-export const ARTWORKS_BY_ID_ENDPOINT = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(i</span>d: number | string) =&gt;</span>
-<span class="cstat-no" title="statement not covered" >  `https://api.artic.edu/api/v1/artworks/${id}?`;</span>
+export const ARTWORKS_BY_ID_ENDPOINT = (id: number | string) =&gt;
+  `https://api.artic.edu/api/v1/artworks/${id}?`;
 &nbsp;
-export const IMAGE_ENDPOINT = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(i</span>d: number | string) =&gt;</span>
+export const IMAGE_ENDPOINT = <span class="fstat-no" title="function not covered" >(i</span>d: number | string) =&gt;
 <span class="cstat-no" title="statement not covered" >  `https://www.artic.edu/iiif/2/${id}/full/full/0/default.jpg`;</span>
 &nbsp;
-export const SEARCH_ENDPOINT = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(q</span>: string) =&gt;</span>
-<span class="cstat-no" title="statement not covered" >  `${ARTWORKS_ENDPOINT}/search?q=${q}&amp;query[term][is_public_domain]=true`;</span>
+export const SEARCH_ENDPOINT = (q: string) =&gt;
+  `${ARTWORKS_ENDPOINT}/search?q=${q}&amp;query[term][is_public_domain]=true`;
 &nbsp;
-export const FAVORITES_KEY = <span class="cstat-no" title="statement not covered" >'FAVORITES_KEY';</span>
+export const FAVORITES_KEY = 'FAVORITES_KEY';
 &nbsp;
-export const TIMEOUT = <span class="cstat-no" title="statement not covered" >1000;</span>
+export const TIMEOUT = 1000;
 &nbsp;
 export const FIELDS_OPTIONS =
-<span class="cstat-no" title="statement not covered" >  'image_id,id,title,artist_display,artist_title,is_public_domain,place_of_origin,dimensions,credit_line,is_on_view,gallery_title,date_start,date_end';</span>
+  'image_id,id,title,artist_display,artist_title,is_public_domain,place_of_origin,dimensions,credit_line,is_on_view,gallery_title,date_start,date_end';
 &nbsp;
-export const DEFAULT_OTHER_LIMIT = <span class="cstat-no" title="statement not covered" >9;</span>
+export const DEFAULT_OTHER_LIMIT = 9;
 &nbsp;
-export const DEFAULT_SEARCH_LIMIT = <span class="cstat-no" title="statement not covered" >3;</span>
+export const DEFAULT_SEARCH_LIMIT = 3;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -133,7 +133,7 @@ export const DEFAULT_SEARCH_LIMIT = <span class="cstat-no" title="statement not 
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-02-23T11:31:23.203Z
+                at 2025-02-27T09:25:43.513Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
