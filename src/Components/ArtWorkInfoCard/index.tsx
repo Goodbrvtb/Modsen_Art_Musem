@@ -35,6 +35,7 @@ export const ArtWorkInfoCard: FC<ArtWorkInfoCardProps> = ({
   const handleFavClick = () => {
     handleFavoritesChange(artWork);
   };
+
   return (
     <div>
       {loadingImg ? (
