@@ -9,6 +9,10 @@
     }
   ],
   "compilerOptions": {
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "types": ["jest", "node"],
     "moduleResolution": "node",
     "strict": true,
     "forceConsistentCasingInFileNames": true,

@@ -7,7 +7,6 @@ import { Title } from '@components/Title';
 
 import { checkFavorites } from '@/utils/checkFavorites';
 import { useHandleFavIdChange } from '@/utils/hooks/useHandleFavIdChange';
-import { ArtWork } from '@/utils/types';
 
 export function FavoritesPage() {
   const { favoritesIds, handleFavoritesChange } = useHandleFavIdChange();
