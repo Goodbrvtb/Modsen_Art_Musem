@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 type Callback = () => void;
 export const useClickOutside = (
-  menuRef: React.RefObject<HTMLDivElement>,
+  menuRef: React.RefObject<HTMLDivElement | null>,
   callback: Callback,
 ) => {
   const handleClick = (e: MouseEvent) => {
