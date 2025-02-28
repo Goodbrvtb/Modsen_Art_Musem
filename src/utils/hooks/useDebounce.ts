@@ -2,10 +2,10 @@ import { useEffect, useRef } from 'react';
 
 import { SomeFunction, Timer } from '@/utils/types';
 
-export function useDebounce<T extends any[]>(
-  func: SomeFunction,
+export function useDebounce<T>(
+  func: SomeFunction<T>,
   delay: number,
-): (...args: T) => void {
+): (...args: T[]) => void {
   const timeoutCurrent = useRef<Timer | undefined>(undefined);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export function useDebounce<T extends any[]>(
     };
   }, []);
 
-  const debounceFunction = (...args: T): void => {
+  const debounceFunction = (...args: T[]): void => {
     if (timeoutCurrent.current) {
       clearTimeout(timeoutCurrent.current);
     }

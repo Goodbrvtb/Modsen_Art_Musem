@@ -3,9 +3,10 @@ import { IMAGE_ENDPOINT } from '@/constants/api';
 import { useEffect, useState } from 'react';
 
 import { getArtWorksByIdApiAxios, getOtherArtWorksApiAxios } from '../apiApp';
+import { ArtWorkFullInfo } from '../types';
 
 export const useGetOtherArtWorks = () => {
-  const [data, setData] = useState<any>([]);
+  const [data, setData] = useState<ArtWorkFullInfo[]>([]);
 
   useEffect(() => {
     async function getArtWorks() {

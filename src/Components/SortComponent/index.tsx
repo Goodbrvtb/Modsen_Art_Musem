@@ -8,7 +8,7 @@ import { SelectField } from './SelectField';
 
 interface SortComponentProps {
   data: ArtWork[];
-  setData: Dispatch<SetStateAction<any[]>>;
+  setData: Dispatch<SetStateAction<ArtWork[]>>;
 }
 
 export const SortComponent: FC<SortComponentProps> = ({ data, setData }) => {

@@ -3,7 +3,7 @@ export interface ImageFallback {
 }
 
 export type Timer = ReturnType<typeof setTimeout>;
-export type SomeFunction = (...args: any[]) => void;
+export type SomeFunction<T> = (...args: T[]) => void;
 
 export type SortType = 'asc' | 'desc' | 'oldToNew' | 'newToOld' | 'default';
 
