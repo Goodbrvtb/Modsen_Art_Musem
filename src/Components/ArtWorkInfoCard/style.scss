@@ -1,4 +1,4 @@
-@import '../../styles';
+@import '@/styles';
 
 .special-gallery-card {
   width: 387px;
@@ -6,7 +6,7 @@
   background-position: center center;
   background-size: cover;
 
-  @media screen and (max-device-width: 1280px) {
+  @media screen and (max-device-width: $screen-resolution-for-monitors) {
     width: 320px;
     height: 360px;
   }
@@ -28,7 +28,7 @@
   padding: 24px;
   gap: 8px;
 
-  @media screen and (max-device-width: 1280px) {
+  @media screen and (max-device-width: $screen-resolution-for-monitors) {
     top: 70%;
     position: relative;
     width: 300px;

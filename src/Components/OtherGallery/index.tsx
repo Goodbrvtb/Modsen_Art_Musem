@@ -1,8 +1,8 @@
 import { FC } from 'react';
 
 import { checkFavorites } from '@utils/checkFavorites';
+import { ArtWorkFullInfo } from '@utils/types';
 
-import { ArtWorkFullInfo } from '../../utils/types';
 import { ArtWorkInfoCardOther } from '../ArtWorkInfoCartSmall';
 import './style.scss';
 

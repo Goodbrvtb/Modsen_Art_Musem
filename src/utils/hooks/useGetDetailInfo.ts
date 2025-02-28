@@ -1,14 +1,13 @@
+import { IMAGE_ENDPOINT } from '@/constants/api';
+
 import { useEffect, useState } from 'react';
 
-import { IMAGE_ENDPOINT } from '../../constants/api';
 import { getArtWorksByIdApiAxios } from '../apiApp';
 import { ArtWorkFullInfo, UseArtWorkApiAxiosProps } from '../types';
 
-//указать тип возвращаемого значения функции
 export const useArtWorkApiAxios = ({
   id,
 }: UseArtWorkApiAxiosProps): ArtWorkFullInfo | undefined => {
-  //убрать any указать нормальный тип
   const [info, setInfo] = useState<ArtWorkFullInfo>();
 
   useEffect(() => {

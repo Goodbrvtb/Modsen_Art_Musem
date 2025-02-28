@@ -1,3 +1,5 @@
+import { FAVORITE_ROUTE, HOME_ROUTE } from '@/routes';
+
 import { FC, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
@@ -8,7 +10,6 @@ import homeImg from '@assets/icons/home.svg';
 import logo from '@assets/icons/museum-logo.svg';
 import { useClickOutside } from '@utils/hooks/useClickOutside';
 
-import { FAVORITE_ROUTE, HOME_ROUTE } from '../../routes';
 import './style.scss';
 
 export const Header: FC = () => {

@@ -1,6 +1,7 @@
+import { FAVORITES_KEY } from '@/constants/api';
+
 import { useEffect, useState } from 'react';
 
-import { FAVORITES_KEY } from '../../constants/api';
 import { ArtWorkFullInfo } from '../types';
 
 export const useHandleFavIdChange = () => {

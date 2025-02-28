@@ -1,4 +1,4 @@
-@import '../../styles';
+@import '@/styles';
 
 .header {
   padding: 0;
@@ -88,13 +88,13 @@ button {
   display: none;
 }
 
-@media screen and (max-device-width: 320px) {
+@media screen and (max-device-width: $screen-resolution-for-smartphones) {
   .navigate-button {
     padding-left: 60px;
   }
 }
 
-@media screen and (max-device-width: 768px) {
+@media screen and (max-device-width: $screen-resolution-for-tablets) {
   .fav-and-home-button {
     z-index: 50;
     position: fixed;

@@ -9,7 +9,6 @@ import { useSkeleton } from '@utils/hooks/useSkeleton';
 
 import { ArtWork, ArtWorkFullInfo } from '@/utils/types';
 
-import { BuggyComponent } from '../BuggyComponent';
 import { CustomSkeleton } from '../Skeleton';
 import './style.scss';
 

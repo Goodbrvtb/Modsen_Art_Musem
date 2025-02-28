@@ -1,10 +1,9 @@
+import { IMAGE_ENDPOINT } from '@/constants/api';
+
 import { useEffect, useState } from 'react';
 
-import { IMAGE_ENDPOINT } from '../../constants/api';
 import { getArtWorksByIdApiAxios, getOtherArtWorksApiAxios } from '../apiApp';
 
-//указать тип возвращаемого значения функции
-//убрать any указать нормальный тип
 export const useGetOtherArtWorks = () => {
   const [data, setData] = useState<any>([]);
 
