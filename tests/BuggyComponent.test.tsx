@@ -1,7 +1,7 @@
 import React from 'react';
 
 import '@testing-library/jest-dom';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 import { BuggyComponent } from '../src/Components/BuggyComponent';
 import ErrorBoundary from '../src/Components/ErrorBoundary';

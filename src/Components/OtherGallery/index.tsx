@@ -8,7 +8,7 @@ import './style.scss';
 
 export interface OtherGalleryProps {
   isSelected: void;
-  otherArtWorks: any[];
+  otherArtWorks: ArtWorkFullInfo[];
   favoritesIds: ArtWorkFullInfo[];
   handleFavoritesChange: (artwork: ArtWorkFullInfo) => void;
 }
