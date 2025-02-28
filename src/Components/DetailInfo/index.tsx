@@ -110,7 +110,6 @@ export const DetailCart: FC<DetailCartProps> = ({
           </div>
         </div>
       </div>
-      <BuggyComponent />
     </div>
   );
 };
