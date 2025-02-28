@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import { checkFavorites } from '@/utils/checkFavorites';
-import { ArtWork, ArtWorkFullInfo } from '@/utils/types';
+import { ArtWorkFullInfo } from '@/utils/types';
 
 import { ArtWorkInfoCard } from '../ArtWorkInfoCard';
 import { SectionTitle } from '../SectionTitle/index';

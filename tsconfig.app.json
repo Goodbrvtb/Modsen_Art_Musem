@@ -25,7 +25,10 @@
       "@/*": ["./src/*"],
       "@components/*": ["./src/Components/*"],
       "@utils/*": ["./src/utils/*"],
-      "@assets/*": ["./src/assets/*"]
+      "@assets/*": ["./src/assets/*"],
+      "@routes/*": ["./src/routes*"],
+      "@styles/*": ["./src/styles*"],
+      "@constants/*": ["./src/constants/api*"]
     }
   },
   "include": ["src", "tests/validation.test.tsx"]

@@ -1,7 +1,3 @@
-import axios from 'axios';
-
-import { ArtWork, SearchArtWorkType } from '@/utils/types';
-
 import {
   ARTWORKS_BY_ID_ENDPOINT,
   ARTWORKS_ENDPOINT,
@@ -9,7 +5,11 @@ import {
   DEFAULT_SEARCH_LIMIT,
   FIELDS_OPTIONS,
   SEARCH_ENDPOINT,
-} from '../constants/api';
+} from '@/constants/api';
+
+import axios from 'axios';
+
+import { ArtWork, SearchArtWorkType } from '@/utils/types';
 
 export const searchArtWorksApiAxios = async (
   inputData: string,

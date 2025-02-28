@@ -1,3 +1,5 @@
+import { DETAIL_INFO } from '@/routes';
+
 import { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -9,7 +11,6 @@ import { useSkeleton } from '@utils/hooks/useSkeleton';
 
 import { ArtWorkFullInfo } from '@/utils/types';
 
-import { DETAIL_INFO } from '../../routes';
 import './style.scss';
 
 interface ArtWorkInfoCardProps {

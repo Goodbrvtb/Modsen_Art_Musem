@@ -1,4 +1,4 @@
-@import '../../styles';
+@import '@/styles';
 
 .pagination-div {
   padding: 24px 0 0 0;
@@ -6,7 +6,7 @@
   width: 1280px;
   justify-content: flex-end;
 
-  @media screen and (max-device-width: 1280px) {
+  @media screen and (max-device-width: $screen-resolution-for-monitors) {
     width: 100%;
     justify-content: center;
   }

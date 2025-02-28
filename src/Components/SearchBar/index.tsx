@@ -1,10 +1,11 @@
+import { TIMEOUT } from '@/constants/api';
+
 import { ChangeEvent, FC, useState } from 'react';
 
 import search from '@assets/icons/search.svg';
 import { useDebounce } from '@utils/hooks/useDebounce';
 import { checkCyrillic } from '@utils/validation';
 
-import { TIMEOUT } from '../../constants/api';
 import './style.scss';
 
 interface SearchBarProps {

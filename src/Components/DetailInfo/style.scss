@@ -1,4 +1,4 @@
-@import '../../styles';
+@import '@/styles';
 
 .info-cart {
   display: flex;
@@ -46,7 +46,7 @@
   line-height: 30px;
   text-align: left;
   text-decoration-skip-ink: none;
-  color: #e0a449ff; //вынести
+  color: $additional-color-text;
 }
 
 .years-detailInfo {
@@ -96,10 +96,10 @@
 }
 
 .text-info span {
-  color: #e0a449ff;
+  color: $additional-color-text;
 }
 
-@media screen and (max-device-width: 1200px) {
+@media screen and (max-device-width: $screen-resolution-for-monitors) {
   .fav-cart {
     flex-direction: column;
   }
@@ -115,7 +115,7 @@
   }
 }
 
-@media screen and (max-device-width: 1490px) {
+@media screen and (max-device-width: $screen-resolution-for-other) {
   .fav-cart {
     flex-direction: column;
   }
@@ -131,7 +131,7 @@
   }
 }
 
-@media screen and (max-device-width: 768px) {
+@media screen and (max-device-width: $screen-resolution-for-tablets) {
   .fav-cart {
     padding-top: 120px;
     flex-direction: column;
