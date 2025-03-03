@@ -20,11 +20,9 @@ export const useArtWorkApiAxios = ({
       };
 
       setInfo(fullInfo);
-      console.log(fullInfo);
     }
 
     void getInfo(id);
   }, [id]);
-  console.log(info);
   return info;
 };

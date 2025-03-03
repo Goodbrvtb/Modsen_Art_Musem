@@ -4,10 +4,11 @@ import { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import fallBackSrc from '@assets/images/image-default.svg';
-import { FavoritesIcon } from '@components/FavoritesIcon';
-import { CustomSkeleton } from '@components/Skeleton/index';
 import { useImageFallback } from '@utils/hooks/useImageFallback';
 import { useSkeleton } from '@utils/hooks/useSkeleton';
+
+import { FavoritesIcon } from '@/components/favoritesIcon';
+import { CustomSkeleton } from '@/components/skeleton/index';
 
 import { ArtWorkFullInfo } from '@/utils/types';
 

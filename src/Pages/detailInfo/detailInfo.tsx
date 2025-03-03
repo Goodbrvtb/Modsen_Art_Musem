@@ -1,8 +1,8 @@
 import { useParams } from 'react-router-dom';
 
-import { DetailCart } from '@components/DetailInfo';
-import { Footer } from '@components/Footer/index';
-import { Header } from '@components/Header';
+import { DetailCart } from '@/components/detailInfo';
+import { Footer } from '@/components/footer/index';
+import { Header } from '@/components/header';
 
 import { checkFavoritesDetailInfo } from '@/utils/checkFavoritesDetailInfo';
 import { useHandleFavIdChange } from '@/utils/hooks/useHandleFavIdChange';

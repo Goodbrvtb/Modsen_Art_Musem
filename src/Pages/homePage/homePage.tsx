@@ -1,17 +1,18 @@
 import { useState } from 'react';
 
-import { BodyTitleOther } from '@components/BodyTitleOther/index.tsx';
-import { Footer } from '@components/Footer/index';
-import { Header } from '@components/Header';
-import { OtherGallery } from '@components/OtherGallery/index';
-import { Pagination } from '@components/Pagination';
-import { SearchBar } from '@components/SearchBar/index';
-import { SortComponent } from '@components/SortComponent';
-import { SpecialGallery } from '@components/SpecialGallery';
-import { Title } from '@components/Title/index';
 import { useArtWorksApiAxios } from '@utils/hooks/useAxiosArtWorks';
 import { useGetOtherArtWorks } from '@utils/hooks/useGetOtherArtWorks';
 import { useHandlePagination } from '@utils/hooks/useHandlePagination';
+
+import { BodyTitleOther } from '@/components/bodyTitleOther';
+import { Footer } from '@/components/footer/index';
+import { Header } from '@/components/header';
+import { OtherGallery } from '@/components/otherGallery/index';
+import { Pagination } from '@/components/pagination';
+import { SearchBar } from '@/components/searchBar/index';
+import { SortComponent } from '@/components/sortComponent';
+import { SpecialGallery } from '@/components/specialGallery';
+import { Title } from '@/components/title/index';
 
 import { useHandleFavIdChange } from '@/utils/hooks/useHandleFavIdChange';
 

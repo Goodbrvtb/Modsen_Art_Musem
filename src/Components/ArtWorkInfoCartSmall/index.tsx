@@ -4,13 +4,14 @@ import { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import DefaultImage from '@assets/images/image-default.svg';
-import { FavoritesIcon } from '@components/FavoritesIcon';
 import { useImageFallback } from '@utils/hooks/useImageFallback';
 import { useSkeleton } from '@utils/hooks/useSkeleton';
 
+import { FavoritesIcon } from '@/components/favoritesIcon';
+
 import { ArtWorkFullInfo } from '@/utils/types';
 
-import { CustomSkeleton } from '../Skeleton';
+import { CustomSkeleton } from '../skeleton';
 import './style.scss';
 
 interface ArtWorkInfoCardOtherProps {
@@ -34,6 +35,11 @@ export const ArtWorkInfoCardOther: FC<ArtWorkInfoCardOtherProps> = ({
   const handleFavClick = () => {
     handleFavoritesChange(artWork);
   };
+  const handleClickStopPropagation = (
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>,
+  ) => {
+    e.stopPropagation();
+  };
 
   return (
     <div className="other-gallery-card" onClick={handleCardClick}>
@@ -52,10 +58,7 @@ export const ArtWorkInfoCardOther: FC<ArtWorkInfoCardOtherProps> = ({
           </div>
         </div>
       </div>
-      <div
-        onClick={(e) => {
-          e.stopPropagation();
-        }}>
+      <div onClick={handleClickStopPropagation}>
         <button className="info-fav-button" onClick={handleFavClick}>
           <FavoritesIcon isSelected={isSelected} />
         </button>
