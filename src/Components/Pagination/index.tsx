@@ -5,6 +5,7 @@ import { getPaginationNumbers } from '@utils/getPaginationNumbers';
 
 import { PaginationProps } from '@/utils/types';
 
+import { PAGE_INCREMENT } from '../../constants/api';
 import './style.scss';
 
 export const Pagination: FC<PaginationProps> = ({
@@ -13,10 +14,10 @@ export const Pagination: FC<PaginationProps> = ({
   lastPage,
 }) => {
   const handleClickNext = () => {
-    setCurrentPage(currentPage + 1);
+    setCurrentPage(currentPage + PAGE_INCREMENT);
   };
   const handleClickPrev = () => {
-    setCurrentPage(currentPage - 1);
+    setCurrentPage(currentPage - PAGE_INCREMENT);
   };
 
   const handleClickPage = (newPage: number) => {
@@ -27,7 +28,7 @@ export const Pagination: FC<PaginationProps> = ({
     <>
       {lastPage ? (
         <div className="pagination-div">
-          {!(currentPage === 1) && (
+          {!(currentPage === PAGE_INCREMENT) && (
             <button
               title="prev-button"
               className="button-click-prev"

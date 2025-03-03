@@ -1,7 +1,7 @@
-import { ArtWork, SortType } from './types';
+import { ArtWorkFullInfo, SortType } from './types';
 
 interface sortDataByTypeProps {
-  data: ArtWork[];
+  data: ArtWorkFullInfo[];
   type: SortType;
 }
 

@@ -1,6 +1,6 @@
-import { Footer } from '@components/Footer/';
-import { Header } from '@components/Header';
-import { Title } from '@components/Title';
+import { Footer } from '@/components/footer';
+import { Header } from '@/components/header';
+import { Title } from '@/components/title';
 
 export function NotFound() {
   return (

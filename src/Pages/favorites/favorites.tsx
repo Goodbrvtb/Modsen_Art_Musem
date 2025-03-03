@@ -1,9 +1,10 @@
 import FavoritesIcon from '@assets/icons/favorites-icon.svg';
-import { ArtWorkInfoCardOther } from '@components/ArtWorkInfoCartSmall';
-import { Footer } from '@components/Footer/index';
-import { Header } from '@components/Header';
-import { SectionTitle } from '@components/SectionTitle';
-import { Title } from '@components/Title';
+
+import { ArtWorkInfoCardOther } from '@/components/artWorkInfoCartSmall';
+import { Footer } from '@/components/footer/index';
+import { Header } from '@/components/header';
+import { SectionTitle } from '@/components/sectionTitle';
+import { Title } from '@/components/title';
 
 import { checkFavorites } from '@/utils/checkFavorites';
 import { useHandleFavIdChange } from '@/utils/hooks/useHandleFavIdChange';

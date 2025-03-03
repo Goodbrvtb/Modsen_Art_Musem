@@ -2,13 +2,13 @@ import { Dispatch, FC, SetStateAction, useState } from 'react';
 
 import { sortDataByType } from '@utils/sortDataByType';
 
-import { ArtWork, SortType } from '@/utils/types';
+import { ArtWorkFullInfo, SortType } from '@/utils/types';
 
-import { SelectField } from './SelectField';
+import { SelectField } from './selectField';
 
 interface SortComponentProps {
-  data: ArtWork[];
-  setData: Dispatch<SetStateAction<ArtWork[]>>;
+  data: ArtWorkFullInfo[];
+  setData: Dispatch<SetStateAction<ArtWorkFullInfo[]>>;
 }
 
 export const SortComponent: FC<SortComponentProps> = ({ data, setData }) => {

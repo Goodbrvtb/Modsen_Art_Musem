@@ -19,3 +19,5 @@ export const FIELDS_OPTIONS =
 export const DEFAULT_OTHER_LIMIT = 9;
 
 export const DEFAULT_SEARCH_LIMIT = 3;
+
+export const PAGE_INCREMENT = 1;

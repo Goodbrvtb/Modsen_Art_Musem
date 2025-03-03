@@ -3,8 +3,8 @@ import { FC } from 'react';
 import { checkFavorites } from '@/utils/checkFavorites';
 import { ArtWorkFullInfo } from '@/utils/types';
 
-import { ArtWorkInfoCard } from '../ArtWorkInfoCard';
-import { SectionTitle } from '../SectionTitle/index';
+import { ArtWorkInfoCard } from '../artWorkInfoCard';
+import { SectionTitle } from '../sectionTitle/index';
 import './style.scss';
 
 interface SpecialGalleryProps {

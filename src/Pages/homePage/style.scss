@@ -1,5 +1,5 @@
-@import '@/styles';
+@use '../../App' as style;
 
 .wrapper {
-  background-color: $color-background-wrapper;
+  background-color: style.$color-background-wrapper;
 }

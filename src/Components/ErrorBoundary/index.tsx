@@ -1,5 +1,7 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
+import { Title } from '../title';
+
 interface Props {
   children: ReactNode;
 }
@@ -25,8 +27,13 @@ class ErrorBoundary extends Component<Props, State> {
     if (error) {
       return (
         <div>
-          {/* <p>Seems like an error occurred!</p> */}
-          <p>{error.message}</p>
+          <Title
+            title={
+              <>
+                <span>{error.message}</span>
+              </>
+            }
+          />
         </div>
       );
     }
