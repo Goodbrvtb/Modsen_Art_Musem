@@ -1,4 +1,4 @@
-import React, { FC, MouseEvent, useEffect, useState } from 'react';
+import { FC, MouseEvent, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import fallBackSrc from '@assets/images/image-default.svg';

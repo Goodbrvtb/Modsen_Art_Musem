@@ -1,6 +1,6 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { Component, ErrorInfo, ReactNode } from 'react';
 
-import { Title } from '../title';
+import { Title } from '../title/';
 
 interface Props {
   children: ReactNode;

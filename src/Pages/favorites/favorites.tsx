@@ -1,5 +1,3 @@
-import React from 'react';
-
 import FavoritesIcon from '@assets/icons/favorites-icon.svg';
 
 import { ArtWorkInfoCardOther } from '@/components/artWorkInfoCartSmall';
