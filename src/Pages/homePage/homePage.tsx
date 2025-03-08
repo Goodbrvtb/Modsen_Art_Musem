@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 import { useArtWorksApiAxios } from '@utils/hooks/useAxiosArtWorks';
 import { useGetOtherArtWorks } from '@utils/hooks/useGetOtherArtWorks';

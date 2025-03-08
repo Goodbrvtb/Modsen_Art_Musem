@@ -1,3 +1,4 @@
+import React from 'react';
 import { useParams } from 'react-router-dom';
 
 import { DetailCart } from '@/components/detailInfo';
@@ -12,7 +13,13 @@ export function DetailInfo() {
   const { id } = useParams<{ id: string }>();
 
   if (!id) {
-    return <div>Error: Artwork ID not specified</div>;
+    return (
+      <>
+        <Header />
+        <div>Error: Artwork ID not specified</div>;
+        <Footer />
+      </>
+    );
   }
 
   return (

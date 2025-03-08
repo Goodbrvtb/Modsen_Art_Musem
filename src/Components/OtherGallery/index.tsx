@@ -23,6 +23,7 @@ export const OtherGallery: FC<OtherGalleryProps> = ({
       <div className="other-gallery">
         {otherArtWorks.map((artWork) => (
           <ArtWorkInfoCardOther
+            key={artWork.id}
             artWork={artWork}
             isSelected={checkFavorites(favoritesIds, artWork)}
             handleFavoritesChange={handleFavoritesChange}
