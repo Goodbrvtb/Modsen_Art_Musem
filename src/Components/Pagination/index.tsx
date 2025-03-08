@@ -47,6 +47,7 @@ export const Pagination: FC<PaginationProps> = ({
             }).map((pageNumber) => {
               return (
                 <button
+                  key={pageNumber}
                   className={`button-pagination${currentPage == pageNumber ? '-active' : ''}`}
                   onClick={() => handleClickPage(pageNumber)}>
                   {pageNumber}

@@ -1,3 +1,5 @@
+import React from 'react';
+
 import FavoritesIcon from '@assets/icons/favorites-icon.svg';
 
 import { ArtWorkInfoCardOther } from '@/components/artWorkInfoCartSmall';
@@ -53,6 +55,7 @@ export function FavoritesPage() {
         <div className="other-gallery">
           {favoritesIds.map((artWork) => (
             <ArtWorkInfoCardOther
+              key={artWork.id}
               artWork={artWork}
               handleFavoritesChange={handleFavoritesChange}
               isSelected={checkFavorites(favoritesIds, artWork)}
