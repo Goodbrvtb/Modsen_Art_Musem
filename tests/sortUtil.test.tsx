@@ -1,8 +1,8 @@
 import { sortDataByType } from '../src/utils/sortDataByType';
-import { ArtWork } from '../src/utils/types';
+import { ArtWorkFullInfo } from '../src/utils/types';
 
 describe('sortDataByType', () => {
-  const artworks: ArtWork[] = [
+  const artworks: ArtWorkFullInfo[] = [
     {
       id: 1,
       title: 'C',
@@ -17,6 +17,7 @@ describe('sortDataByType', () => {
       is_on_view: true,
       is_public_domain: true,
       place_of_origin: 'Origin A',
+      imageUrl: '',
     },
     {
       id: 2,
@@ -32,6 +33,7 @@ describe('sortDataByType', () => {
       is_on_view: false,
       is_public_domain: true,
       place_of_origin: 'Origin B',
+      imageUrl: '',
     },
     {
       id: 3,
@@ -47,6 +49,7 @@ describe('sortDataByType', () => {
       is_on_view: true,
       is_public_domain: false,
       place_of_origin: 'Origin C',
+      imageUrl: '',
     },
   ];
 
@@ -67,6 +70,7 @@ describe('sortDataByType', () => {
         is_on_view: false,
         is_public_domain: true,
         place_of_origin: 'Origin B',
+        imageUrl: '',
       },
       {
         id: 3,
@@ -82,6 +86,7 @@ describe('sortDataByType', () => {
         is_on_view: true,
         is_public_domain: false,
         place_of_origin: 'Origin C',
+        imageUrl: '',
       },
       {
         id: 1,
@@ -97,6 +102,7 @@ describe('sortDataByType', () => {
         is_on_view: true,
         is_public_domain: true,
         place_of_origin: 'Origin A',
+        imageUrl: '',
       },
     ]);
   });
@@ -118,6 +124,7 @@ describe('sortDataByType', () => {
         is_on_view: true,
         is_public_domain: true,
         place_of_origin: 'Origin A',
+        imageUrl: '',
       },
       {
         id: 3,
@@ -133,6 +140,7 @@ describe('sortDataByType', () => {
         is_on_view: true,
         is_public_domain: false,
         place_of_origin: 'Origin C',
+        imageUrl: '',
       },
       {
         id: 2,
@@ -148,6 +156,7 @@ describe('sortDataByType', () => {
         is_on_view: false,
         is_public_domain: true,
         place_of_origin: 'Origin B',
+        imageUrl: '',
       },
     ]);
   });
@@ -169,6 +178,7 @@ describe('sortDataByType', () => {
         is_on_view: false,
         is_public_domain: true,
         place_of_origin: 'Origin B',
+        imageUrl: '',
       },
       {
         id: 3,
@@ -184,6 +194,7 @@ describe('sortDataByType', () => {
         is_on_view: true,
         is_public_domain: false,
         place_of_origin: 'Origin C',
+        imageUrl: '',
       },
       {
         id: 1,
@@ -199,6 +210,7 @@ describe('sortDataByType', () => {
         is_on_view: true,
         is_public_domain: true,
         place_of_origin: 'Origin A',
+        imageUrl: '',
       },
     ]);
   });
@@ -220,6 +232,7 @@ describe('sortDataByType', () => {
         is_on_view: true,
         is_public_domain: true,
         place_of_origin: 'Origin A',
+        imageUrl: '',
       },
       {
         id: 3,
@@ -235,6 +248,7 @@ describe('sortDataByType', () => {
         is_on_view: true,
         is_public_domain: false,
         place_of_origin: 'Origin C',
+        imageUrl: '',
       },
       {
         id: 2,
@@ -250,6 +264,7 @@ describe('sortDataByType', () => {
         is_on_view: false,
         is_public_domain: true,
         place_of_origin: 'Origin B',
+        imageUrl: '',
       },
     ]);
   });

@@ -32,6 +32,7 @@ export const SpecialGallery: FC<SpecialGalleryProps> = ({
         <div className="special-gallery">
           {artWorks.map((artWork) => (
             <ArtWorkInfoCard
+              key={artWork.id}
               artWork={artWork}
               handleFavoritesChange={handleFavoritesChange}
               isSelected={checkFavorites(favoritesIds, artWork)}
