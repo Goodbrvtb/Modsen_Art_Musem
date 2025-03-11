@@ -2,7 +2,7 @@ import { ChangeEvent, FC } from 'react';
 
 import { SortType } from '@/utils/types';
 
-import '../SelectField/style.scss';
+import '../selectField/style.scss';
 
 interface SelectFieldProps {
   handleSort: (sortType: SortType) => void;
