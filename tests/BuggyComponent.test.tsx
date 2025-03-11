@@ -4,7 +4,7 @@ import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
 
 import { BuggyComponent } from '../src/Components/BuggyComponent';
-import ErrorBoundary from '../src/Components/ErrorBoundary';
+import ErrorBoundary from '../src/Components/errorBoundary';
 import '../src/components/title/style';
 
 test('ErrorBoundary catches error and displays fallback UI', () => {
