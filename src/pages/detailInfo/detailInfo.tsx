@@ -1,8 +1,8 @@
-import { DetailCart } from '@/tempcomponents/detailInfo';
-import { Footer } from '@/tempcomponents/tempfooter/index';
-import { Header } from '@/tempcomponents/tempheader';
-
 import { useParams } from 'react-router-dom';
+
+import { DetailCart } from '@/components/detailInfo';
+import { Footer } from '@/components/footer/index';
+import { Header } from '@/components/header';
 
 import { checkFavoritesDetailInfo } from '@/utils/checkFavoritesDetailInfo';
 import { useHandleFavIdChange } from '@/utils/hooks/useHandleFavIdChange';

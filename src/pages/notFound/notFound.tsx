@@ -1,6 +1,6 @@
-import { Footer } from '@/tempcomponents/tempfooter';
-import { Header } from '@/tempcomponents/tempheader';
-import { Title } from '@/tempcomponents/title';
+import { Footer } from '@/components/footer';
+import { Header } from '@/components/header';
+import { Title } from '@/components/title';
 
 export function NotFound() {
   return (

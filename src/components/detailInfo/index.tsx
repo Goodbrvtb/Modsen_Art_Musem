@@ -1,5 +1,3 @@
-import { FavoritesIcon } from '@/tempcomponents/tempfavoritesIcon';
-
 import { FC, MouseEvent, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
@@ -8,9 +6,11 @@ import { useArtWorkApiAxios } from '@utils/hooks/useGetDetailInfo';
 import { useImageFallback } from '@utils/hooks/useImageFallback';
 import { useSkeleton } from '@utils/hooks/useSkeleton';
 
+import { FavoritesIcon } from '@/components/favoritesIcon';
+
 import { ArtWork, ArtWorkFullInfo } from '@/utils/types';
 
-import { CustomSkeleton } from '../tempskeleton';
+import { CustomSkeleton } from '../skeleton';
 import './style.scss';
 
 interface DetailCartProps {

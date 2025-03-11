@@ -1,18 +1,18 @@
-import { BodyTitleOther } from '@/tempcomponents/bodyTitleOther';
-import { Footer } from '@/tempcomponents/tempfooter/index';
-import { Header } from '@/tempcomponents/tempheader';
-import { OtherGallery } from '@/tempcomponents/tempotherGallery/index';
-import { Pagination } from '@/tempcomponents/temppagination';
-import { SearchBar } from '@/tempcomponents/tempsearchBar/index';
-import { SortComponent } from '@/tempcomponents/tempsortComponent';
-import { SpecialGallery } from '@/tempcomponents/tempspecialGallery';
-import { Title } from '@/tempcomponents/title/index';
-
 import { useState } from 'react';
 
 import { useArtWorksApiAxios } from '@utils/hooks/useAxiosArtWorks';
 import { useGetOtherArtWorks } from '@utils/hooks/useGetOtherArtWorks';
 import { useHandlePagination } from '@utils/hooks/useHandlePagination';
+
+import { BodyTitleOther } from '@/components/bodyTitleOther';
+import { Footer } from '@/components/footer/index';
+import { Header } from '@/components/header';
+import { OtherGallery } from '@/components/otherGallery/index';
+import { Pagination } from '@/components/pagination';
+import { SearchBar } from '@/components/searchBar/index';
+import { SortComponent } from '@/components/sortComponent';
+import { SpecialGallery } from '@/components/specialGallery';
+import { Title } from '@/components/title/index';
 
 import { useHandleFavIdChange } from '@/utils/hooks/useHandleFavIdChange';
 
