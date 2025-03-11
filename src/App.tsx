@@ -1,8 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import ErrorBoundary from '@/components/errorBoundary';
-
 import './app.scss';
+import ErrorBoundary from './components/errorBoundary';
 import { routes } from './routes';
 import './styles/globals.scss';
 
