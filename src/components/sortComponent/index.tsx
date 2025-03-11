@@ -4,7 +4,7 @@ import { sortDataByType } from '@utils/sortDataByType';
 
 import { ArtWorkFullInfo, SortType } from '@/utils/types';
 
-import { SelectField } from './selectField';
+import { SelectField } from './selectField/index';
 
 interface SortComponentProps {
   data: ArtWorkFullInfo[];
