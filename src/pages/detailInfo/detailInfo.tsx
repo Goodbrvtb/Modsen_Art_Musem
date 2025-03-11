@@ -5,8 +5,7 @@ import { Footer } from '@/components/footer/index';
 import { Header } from '@/components/header';
 
 import { checkFavoritesDetailInfo } from '@/utils/checkFavoritesDetailInfo';
-
-import { useHandleFavIdChange } from '../../utils/hooks/useHandleFavIdChange';
+import { useHandleFavIdChange } from '@/utils/hooks/useHandleFavIdChange';
 
 export function DetailInfo() {
   const { favoritesIds, handleFavoritesChange } = useHandleFavIdChange();
