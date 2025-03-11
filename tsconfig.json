@@ -22,9 +22,9 @@
       "@components/*": ["./src/components/*"],
       "@utils/*": ["./src/utils/*"],
       "@assets/*": ["./src/assets/*"],
-      "@routes/*": ["./src/routes*"],
-      "@styles/*": ["./src/styles*"],
-      "@constants/*": ["./src/constants/api*"]
+      "@routes/*": ["./src/routes/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@constants/*": ["./src/constants/api/*"]
     }
   }
 }
