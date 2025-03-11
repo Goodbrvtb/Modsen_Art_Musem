@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { ImageFallback } from '../types';
 
@@ -8,16 +8,26 @@ export const useImageFallback = (
 ): ImageFallback => {
   const [imgSrc, setImgSrc] = useState<string>(src);
 
-  const img = document.createElement('img');
-  img.src = src;
+  useEffect(() => {
+    const img = new Image();
+    img.src = src;
 
-  img.onload = function () {
-    setImgSrc(src);
-  };
+    const handleLoad = () => {
+      setImgSrc(src);
+    };
 
-  img.onerror = function () {
-    setImgSrc(FALL_BACK_S);
-  };
+    const handleError = () => {
+      setImgSrc(FALL_BACK_S);
+    };
+
+    img.addEventListener('load', handleLoad);
+    img.addEventListener('error', handleError);
+
+    return () => {
+      img.removeEventListener('load', handleLoad);
+      img.removeEventListener('error', handleError);
+    };
+  }, [src, FALL_BACK_S]);
 
   return { imgSrc };
 };

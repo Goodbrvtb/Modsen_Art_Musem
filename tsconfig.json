@@ -26,5 +26,6 @@
       "@styles/*": ["./src/styles/*"],
       "@constants/*": ["./src/constants/*"]
     }
-  }
+  },
+  "include": ["src/**/*", "tests/**/*"]
 }
