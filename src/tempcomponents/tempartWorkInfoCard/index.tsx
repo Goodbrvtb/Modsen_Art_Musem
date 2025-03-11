@@ -1,4 +1,5 @@
 import { DETAIL_INFO } from '@/routes';
+import { CustomSkeleton } from '@/tempcomponents/tempskeleton/index';
 
 import { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -7,11 +8,9 @@ import fallBackSrc from '@assets/images/image-default.svg';
 import { useImageFallback } from '@utils/hooks/useImageFallback';
 import { useSkeleton } from '@utils/hooks/useSkeleton';
 
-import { CustomSkeleton } from '@/components/skeleton/index';
-
 import { ArtWorkFullInfo } from '@/utils/types';
 
-import { FavoritesIcon } from '../favoritesIcon';
+import { FavoritesIcon } from '../tempfavoritesIcon';
 import './style.scss';
 
 interface ArtWorkInfoCardProps {

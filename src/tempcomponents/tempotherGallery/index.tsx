@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { checkFavorites } from '@utils/checkFavorites';
 import { ArtWorkFullInfo } from '@utils/types';
 
-import { ArtWorkInfoCardOther } from '../artWorkInfoCartSmall';
+import { ArtWorkInfoCardOther } from '../tempartWorkInfoCartSmall';
 import './style.scss';
 
 export interface OtherGalleryProps {

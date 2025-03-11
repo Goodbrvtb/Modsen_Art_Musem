@@ -1,10 +1,10 @@
-import FavoritesIcon from '@assets/icons/favorites-icon.svg';
+import { ArtWorkInfoCardOther } from '@/tempcomponents/tempartWorkInfoCartSmall';
+import { Footer } from '@/tempcomponents/tempfooter/index';
+import { Header } from '@/tempcomponents/tempheader';
+import { SectionTitle } from '@/tempcomponents/tempsectionTitle';
+import { Title } from '@/tempcomponents/title';
 
-import { ArtWorkInfoCardOther } from '@/components/artWorkInfoCartSmall';
-import { Footer } from '@/components/footer/index';
-import { Header } from '@/components/header';
-import { SectionTitle } from '@/components/sectionTitle';
-import { Title } from '@/components/title';
+import FavoritesIcon from '@assets/icons/favorites-icon.svg';
 
 import { checkFavorites } from '@/utils/checkFavorites';
 import { useHandleFavIdChange } from '@/utils/hooks/useHandleFavIdChange';
