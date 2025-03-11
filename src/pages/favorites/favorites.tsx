@@ -7,7 +7,9 @@ import { SectionTitle } from '@/components/sectionTitle';
 import { Title } from '@/components/title';
 
 import { checkFavorites } from '@/utils/checkFavorites';
-import { useHandleFavIdChange } from '@/utils/hooks/useHandleFavIdChange';
+
+import { useHandleFavIdChange } from '../../utils/hooks/useHandleFavIdChange';
+import { ArtWorkFullInfo } from '../../utils/types';
 
 export function FavoritesPage() {
   const { favoritesIds, handleFavoritesChange } = useHandleFavIdChange();
@@ -51,7 +53,7 @@ export function FavoritesPage() {
           </div>
         )}
         <div className="other-gallery">
-          {favoritesIds.map((artWork) => (
+          {favoritesIds.map((artWork: ArtWorkFullInfo) => (
             <ArtWorkInfoCardOther
               key={artWork.id}
               artWork={artWork}

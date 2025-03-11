@@ -14,8 +14,7 @@ import { SortComponent } from '@/components/sortComponent';
 import { SpecialGallery } from '@/components/specialGallery';
 import { Title } from '@/components/title/index';
 
-import { useHandleFavIdChange } from '@/utils/hooks/useHandleFavIdChange';
-
+import { useHandleFavIdChange } from '../../utils/hooks/useHandleFavIdChange';
 import './style.scss';
 
 export function HomePage() {
